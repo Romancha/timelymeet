@@ -1,0 +1,4648 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "shouldTranslate" : false
+    },
+    "%lld" : {
+      "shouldTranslate" : false
+    },
+    "%lld notifications" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld уведомлений"
+          }
+        }
+      }
+    },
+    "%lld/10" : {
+      "shouldTranslate" : false
+    },
+    "%lld%%" : {
+      "shouldTranslate" : false
+    },
+    "•" : {
+      "shouldTranslate" : false
+    },
+    "+ %lld more" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+ %lld еще"
+          }
+        }
+      }
+    },
+    "×" : {
+      "shouldTranslate" : false
+    },
+    "📅 %@" : {
+      "shouldTranslate" : false
+    },
+    "🔔 %@" : {
+      "shouldTranslate" : false
+    },
+    "2:34" : {
+      "shouldTranslate" : false
+    },
+    "5" : {
+      "shouldTranslate" : false
+    },
+    "14:30" : {
+      "shouldTranslate" : false
+    },
+    "about_meetalert" : {
+      "comment" : "About & Legal",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About TimelyMeet"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О TimelyMeet"
+          }
+        }
+      }
+    },
+    "access_denied" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Access denied"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступ запрещён"
+          }
+        }
+      }
+    },
+    "access_granted_full" : {
+      "comment" : "Status Messages",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full access granted"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полный доступ предоставлен"
+          }
+        }
+      }
+    },
+    "access_not_determined" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not determined"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не определено"
+          }
+        }
+      }
+    },
+    "access_restricted" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Access restricted"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступ ограничен"
+          }
+        }
+      }
+    },
+    "access_write_only" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Write-only access"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступ только на запись"
+          }
+        }
+      }
+    },
+    "active_calendars" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active Calendars"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Активные календари"
+          }
+        }
+      }
+    },
+    "all_meetalert_scheduled_notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All TimelyMeet Scheduled Notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все запланированные уведомления TimelyMeet"
+          }
+        }
+      }
+    },
+    "Analytics" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Аналитика"
+          }
+        }
+      }
+    },
+    "app_bundle_id" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Bundle ID"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Bundle ID"
+          }
+        }
+      }
+    },
+    "app_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stay timely. Never miss a meet."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stay timely. Never miss a meet."
+          }
+        }
+      }
+    },
+    "app_feedback_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TimelyMeet is continuously evolving based on user feedback. Share your ideas, report issues, or request new features."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TimelyMeet постоянно развивается на основе отзывов пользователей. Делитесь идеями, сообщайте о проблемах или запрашивайте новые функции."
+          }
+        }
+      }
+    },
+    "app_improvement_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We're constantly working to improve TimelyMeet. Here's what's planned:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мы постоянно работаем над улучшением TimelyMeet. Вот что запланировано:"
+          }
+        }
+      }
+    },
+    "app_info_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TimelyMeet is a smart macOS application designed to help you never miss an important meeting. It monitors your calendar events and provides timely, customizable notifications with direct access to video conference links."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TimelyMeet — это умное приложение для macOS, призванное помочь вам никогда не пропустить важную встречу. Оно отслеживает события вашего календаря и предоставляет своевременные настраиваемые уведомления с прямым доступом к ссылкам видеоконференций."
+          }
+        }
+      }
+    },
+    "app_integration_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TimelyMeet integrates with your system calendar to provide enhanced meeting management capabilities. All calendar data is processed locally on your device."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TimelyMeet интегрируется с системным календарем для предоставления расширенных возможностей управления встречами. Все данные календаря обрабатываются локально на вашем устройстве."
+          }
+        }
+      }
+    },
+    "app_name" : {
+      "comment" : "App Core",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TimelyMeet"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TimelyMeet"
+          }
+        }
+      }
+    },
+    "app_tagline" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smart meeting reminders"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Умные напоминания о встречах"
+          }
+        }
+      }
+    },
+    "application_language" : {
+      "comment" : "Language Settings",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Application Language"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык приложения"
+          }
+        }
+      }
+    },
+    "application_language_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Application Language"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык приложения"
+          }
+        }
+      }
+    },
+    "attendees_count" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%d attendees"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%d участников"
+          }
+        }
+      }
+    },
+    "auto_width_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatically adjusts menu bar width based on content"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Автоматически подстраивает ширину строки меню под содержимое"
+          }
+        }
+      }
+    },
+    "auto_width_mode" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto width mode"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Автоматическая ширина"
+          }
+        }
+      }
+    },
+    "background_sync_status" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Background Sync: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фоновая синхронизация: %@"
+          }
+        }
+      }
+    },
+    "beautiful_fullscreen_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elegant fullscreen meeting notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Элегантные полноэкранные уведомления о встречах"
+          }
+        }
+      }
+    },
+    "browser_default_label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Default browser:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Браузер по умолчанию:"
+          }
+        }
+      }
+    },
+    "browser_found_providers_count" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Found %1$lld provider%2$@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Найдено %1$lld провайдер%2$@"
+          }
+        }
+      }
+    },
+    "browser_global_defaults" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Global Defaults"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Глобальные настройки"
+          }
+        }
+      }
+    },
+    "browser_no_providers_found" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No providers found"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Провайдеры не найдены"
+          }
+        }
+      }
+    },
+    "browser_opening_method_label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Default opening method:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Способ открытия по умолчанию:"
+          }
+        }
+      }
+    },
+    "browser_opening_method_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opening Method"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Способ открытия"
+          }
+        }
+      }
+    },
+    "browser_provider_specific_settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Provider-Specific Settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки провайдеров"
+          }
+        }
+      }
+    },
+    "browser_reset_to_default" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset to Default"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросить к настройкам по умолчанию"
+          }
+        }
+      }
+    },
+    "browser_search_providers_placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search providers..."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск провайдеров..."
+          }
+        }
+      }
+    },
+    "browser_section_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Browser"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Браузер"
+          }
+        }
+      }
+    },
+    "browser_show_deprecated_warnings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show warnings for deprecated deeplinks"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показывать предупреждения для устаревших ссылок"
+          }
+        }
+      }
+    },
+    "browser_strategy_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strategy"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стратегия"
+          }
+        }
+      }
+    },
+    "build_date" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Build Date"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дата сборки"
+          }
+        }
+      }
+    },
+    "calendar_access_required" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No calendars available. Make sure you have granted calendar access."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Календари недоступны. Убедитесь, что предоставили доступ к календарю."
+          }
+        }
+      }
+    },
+    "calendar_integration" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar Integration"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Интеграция календаря"
+          }
+        }
+      }
+    },
+    "calendar_integration_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seamless calendar synchronization"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Беспроблемная синхронизация календаря"
+          }
+        }
+      }
+    },
+    "calendar_integration_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar Integration"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Интеграция календаря"
+          }
+        }
+      }
+    },
+    "calendar_permission_message" : {
+      "comment" : "Calendar permission notification message",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TimelyMeet needs access to your calendar to show upcoming meetings and send notifications. Please grant calendar access in System Settings."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TimelyMeet требует доступ к календарю для отображения предстоящих встреч и отправки уведомлений. Пожалуйста, предоставьте доступ к календарю в Системных настройках."
+          }
+        }
+      }
+    },
+    "calendar_selection" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar Selection"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбор календаря"
+          }
+        }
+      }
+    },
+    "calendar_selection_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select which calendars to monitor for meeting notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите календари для отслеживания уведомлений о встречах"
+          }
+        }
+      }
+    },
+    "calendar_selection_description_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select which calendars to monitor for meeting notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите календари для отслеживания уведомлений о встречах"
+          }
+        }
+      }
+    },
+    "calendar_selection_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar Selection"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбор календаря"
+          }
+        }
+      }
+    },
+    "calendar_status" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar Status"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Статус календаря"
+          }
+        }
+      }
+    },
+    "cancel" : {
+      "comment" : "Common Actions",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменить"
+          }
+        }
+      }
+    },
+    "cancel_all" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel All"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменить все"
+          }
+        }
+      }
+    },
+    "choose_option_sidebar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose an option from the sidebar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите опцию на боковой панели"
+          }
+        }
+      }
+    },
+    "cloud_sync" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cloud Sync"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Облачная синхронизация"
+          }
+        }
+      }
+    },
+    "cloud_sync_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sync settings across devices"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Синхронизация настроек между устройствами"
+          }
+        }
+      }
+    },
+    "coming_soon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coming Soon"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скоро"
+          }
+        }
+      }
+    },
+    "copyright" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copyright © 2025 TimelyMeet. All rights reserved."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copyright © 2025 TimelyMeet. Все права защищены."
+          }
+        }
+      }
+    },
+    "core_features" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎉 Core Features"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎉 Основные функции"
+          }
+        }
+      }
+    },
+    "current_menu_bar_preview_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current menu bar display:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Текущее отображение:"
+          }
+        }
+      }
+    },
+    "custom_notification_sounds_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personalize your meeting alerts"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Персонализируйте свои уведомления о встречах"
+          }
+        }
+      }
+    },
+    "custom_snooze_time" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom Snooze Time"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пользовательское время отсрочки"
+          }
+        }
+      }
+    },
+    "customizable_reminder_times" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customizable reminder times"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настраиваемое время напоминаний"
+          }
+        }
+      }
+    },
+    "customization" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎨 Customization"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎨 Настройка"
+          }
+        }
+      }
+    },
+    "Daily Standup" : {
+      "shouldTranslate" : false
+    },
+    "deselect_all" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deselect All"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Снять выбор со всех"
+          }
+        }
+      }
+    },
+    "deselect_all_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deselect All"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Снять выбор со всех"
+          }
+        }
+      }
+    },
+    "developer_mode" : {
+      "comment" : "Developer Mode",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Developer Mode"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим разработчика"
+          }
+        }
+      }
+    },
+    "developer_mode_disabled" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Developer Mode Disabled"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим разработчика отключен"
+          }
+        }
+      }
+    },
+    "developer_settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Developer Settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки разработчика"
+          }
+        }
+      }
+    },
+    "developer_tools" : {
+
+    },
+    "dismiss" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dismiss"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть"
+          }
+        }
+      }
+    },
+    "Dismiss" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отклонить"
+          }
+        }
+      }
+    },
+    "dismiss_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dimiss"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отклонить"
+          }
+        }
+      }
+    },
+    "display_options_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Display Options"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Параметры отображения"
+          }
+        }
+      }
+    },
+    "display_timing" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Display Timing"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время отображения"
+          }
+        }
+      }
+    },
+    "enable_developer_mode" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Developer Mode"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включить режим разработчика"
+          }
+        }
+      }
+    },
+    "enable_developer_mode_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable developer mode to access notification testing tools."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включите режим разработчика для доступа к инструментам тестирования уведомлений."
+          }
+        }
+      }
+    },
+    "enable_notifications_meeting" : {
+      "comment" : "Notifications",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable notifications for this meeting"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включить уведомления для этой встречи"
+          }
+        }
+      }
+    },
+    "enable_performance_monitoring" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Performance Monitoring"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включить мониторинг производительности"
+          }
+        }
+      }
+    },
+    "error_format" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error - %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка - %@"
+          }
+        }
+      }
+    },
+    "Event: %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Событие: %@"
+          }
+        }
+      }
+    },
+    "example_1_hour" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 hour: Only show meetings today"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 час: Показать только встречи на сегодня"
+          }
+        }
+      }
+    },
+    "example_8_hours" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "8 hours: Show meetings until tonight"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "8 часов: Показать встречи до вечера"
+          }
+        }
+      }
+    },
+    "example_24_hours" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24 hours: Show tomorrow's meetings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24 часа: Показать завтрашние встречи"
+          }
+        }
+      }
+    },
+    "examples_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Example:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пример:"
+          }
+        }
+      }
+    },
+    "feature_data_protection" : {
+      "comment" : "Feature List",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Complete Privacy: We do not collect or store any user data"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полная конфиденциальность: Не собираем и не храним пользовательские данные"
+          }
+        }
+      }
+    },
+    "feature_data_protection_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your calendar data stays private and secure on your device"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Данные вашего календаря остаются конфиденциальными и защищенными на вашем устройстве"
+          }
+        }
+      }
+    },
+    "feature_fast_join" : {
+      "comment" : "Feature List",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fast join to conference"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Быстрое подключение к конференции"
+          }
+        }
+      }
+    },
+    "feature_fast_join_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One-click joining of video conferences with smart URL detection"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Присоединение к видеоконференциям одним кликом с умным определением ссылок"
+          }
+        }
+      }
+    },
+    "feature_free_solution" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completely Free"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полностью бесплатно"
+          }
+        }
+      }
+    },
+    "feature_free_solution_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No subscriptions, no hidden fees - all features are free"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Без подписок и скрытых платежей - все функции бесплатны"
+          }
+        }
+      }
+    },
+    "feature_full_creen_alert" : {
+      "comment" : "Feature List",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full screen alert"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уведомление во весь экран"
+          }
+        }
+      }
+    },
+    "feature_fullscreen_alerts" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fullscreen Alerts"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полноэкранные уведомления"
+          }
+        }
+      }
+    },
+    "feature_fullscreen_alerts_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beautiful fullscreen notifications that grab your attention"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Красивые полноэкранные уведомления, которые привлекут ваше внимание"
+          }
+        }
+      }
+    },
+    "feature_menubar" : {
+      "comment" : "Feature List",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meeting info in menu bar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Информация о встречах в строке меню"
+          }
+        }
+      }
+    },
+    "feature_menubar_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Always accessible from your menu bar with quick meeting overview"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Всегда доступно из строки меню с быстрым обзором встреч"
+          }
+        }
+      }
+    },
+    "feature_notifications" : {
+      "comment" : "Feature List",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adjustable notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настраиваемые уведомления"
+          }
+        }
+      }
+    },
+    "feature_notifications_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customizable reminder times and notification sounds for your meetings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настраиваемые времена напоминаний и звуки уведомлений для ваших встреч"
+          }
+        }
+      }
+    },
+    "feature_shortcuts" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keyboard Shortcuts"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Горячие клавиши"
+          }
+        }
+      }
+    },
+    "feature_shortcuts_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ESC to dismiss, Enter to join meetings, S to snooze (3min). Hold snooze button for custom time options"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ESC чтобы закрыть, Enter для встреч, S отложить (3мин). Зажмите кнопку snooze для выбора времени"
+          }
+        }
+      }
+    },
+    "feature_smart_notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smart Notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Умные уведомления"
+          }
+        }
+      }
+    },
+    "feature_smart_notifications_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customizable reminder times and notification sounds"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настраиваемые времена напоминаний и звуки уведомлений"
+          }
+        }
+      }
+    },
+    "features_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Features:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Возможности:"
+          }
+        }
+      }
+    },
+    "feedback_matters" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Feedback Matters"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваша обратная связь важна"
+          }
+        }
+      }
+    },
+    "flexible_menu_bar_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customizable menu bar display options"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настраиваемые параметры отображения в строке меню"
+          }
+        }
+      }
+    },
+    "follow_updates" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Follow Updates"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Следить за обновлениями"
+          }
+        }
+      }
+    },
+    "Found %lld provider%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Found %1$lld provider%2$@"
+          }
+        }
+      }
+    },
+    "fullscreen_overlay_notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fullscreen Overlay Notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полноэкранные уведомления"
+          }
+        }
+      }
+    },
+    "future_updates_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Future Updates"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Будущие обновления"
+          }
+        }
+      }
+    },
+    "grant_access" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grant Access"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предоставить доступ"
+          }
+        }
+      }
+    },
+    "help_improve_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help Improve TimelyMeet"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Помогите улучшить TimelyMeet"
+          }
+        }
+      }
+    },
+    "hours_30min" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 min"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 мин"
+          }
+        }
+      }
+    },
+    "hours_48" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "48 hours"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "48 часов"
+          }
+        }
+      }
+    },
+    "hours_format" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.1f hours"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.1f часов"
+          }
+        }
+      }
+    },
+    "Join" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Присоединиться"
+          }
+        }
+      }
+    },
+    "Join %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Присоединиться к %@"
+          }
+        }
+      }
+    },
+    "join_meeting" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Join Meeting"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Присоединиться к встрече"
+          }
+        }
+      }
+    },
+    "join_platform" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Join %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Присоединиться к %@"
+          }
+        }
+      }
+    },
+    "Language" : {
+      "shouldTranslate" : false
+    },
+    "language_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose your preferred language for the application interface."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите предпочитаемый язык для интерфейса приложения."
+          }
+        }
+      }
+    },
+    "language_english" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English"
+          }
+        }
+      }
+    },
+    "language_picker_label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык"
+          }
+        }
+      }
+    },
+    "language_restart_required" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language changes will take effect after restarting the application."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изменения языка вступят в силу после перезапуска приложения."
+          }
+        }
+      }
+    },
+    "language_russian" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Russian"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Русский"
+          }
+        }
+      }
+    },
+    "Last test: %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последний тест: %@"
+          }
+        }
+      }
+    },
+    "last_sync_format" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last sync: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последняя синхронизация: %@"
+          }
+        }
+      }
+    },
+    "last_test_format" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last test: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последний тест: %@"
+          }
+        }
+      }
+    },
+    "later" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Later"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Позже"
+          }
+        }
+      }
+    },
+    "legal" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legal"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Правовая информация"
+          }
+        }
+      }
+    },
+    "loading_events" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading events..."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузка событий..."
+          }
+        }
+      }
+    },
+    "macos_version" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS Version"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия macOS"
+          }
+        }
+      }
+    },
+    "manual_width_setting" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manual width setting"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ручная настройка ширины"
+          }
+        }
+      }
+    },
+    "MEETING STARTING SOON" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ВСТРЕЧА СКОРО НАЧНЕТСЯ"
+          }
+        }
+      }
+    },
+    "meeting_attendees_label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Attendees"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Участники"
+          }
+        }
+      }
+    },
+    "meeting_calendar_label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Календарь"
+          }
+        }
+      }
+    },
+    "meeting_location_label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Место"
+          }
+        }
+      }
+    },
+    "meeting_minutes_format" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meeting starts in %d minutes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Встреча начнется через %d минут"
+          }
+        }
+      }
+    },
+    "meeting_start_time" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meeting Start Time"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время начала встречи"
+          }
+        }
+      }
+    },
+    "meeting_starting_soon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MEETING STARTING SOON"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ВСТРЕЧА СКОРО НАЧНЁТСЯ"
+          }
+        }
+      }
+    },
+    "meeting_time_label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meeting Time"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время встречи"
+          }
+        }
+      }
+    },
+    "meeting_url" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meeting URL"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL встречи"
+          }
+        }
+      }
+    },
+    "meetings_count" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%d meetings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%d встреч"
+          }
+        }
+      }
+    },
+    "meetings_start_time" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meetings Start Time:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время начала встречи:"
+          }
+        }
+      }
+    },
+    "menu_bar_customize" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customize how meeting information appears in the menu bar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройте отображение информации о встречах в строке меню"
+          }
+        }
+      }
+    },
+    "menu_bar_display" : {
+      "comment" : "Menu Bar",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu Bar Display"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отображение в строке меню"
+          }
+        }
+      }
+    },
+    "minutes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "minutes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "минут"
+          }
+        }
+      }
+    },
+    "more_meetings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+ %d more"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+ ещё %d"
+          }
+        }
+      }
+    },
+    "multi_language_support" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multi-language Support"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддержка нескольких языков"
+          }
+        }
+      }
+    },
+    "multi_language_support_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support for additional languages"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддержка дополнительных языков"
+          }
+        }
+      }
+    },
+    "next_meeting" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next Meeting"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Следующая встреча"
+          }
+        }
+      }
+    },
+    "next_meeting_in" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next meeting in %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Следующая встреча через %@"
+          }
+        }
+      }
+    },
+    "next_meeting_within" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next meeting is within"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Следующая встреча через"
+          }
+        }
+      }
+    },
+    "no_calendars_available" : {
+      "comment" : "Calendar",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No calendars available"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Календари недоступны"
+          }
+        }
+      }
+    },
+    "no_calendars_available_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No calendars are available"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет доступных календарей"
+          }
+        }
+      }
+    },
+    "no_calendars_selected" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No calendars selected"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Календари не выбраны"
+          }
+        }
+      }
+    },
+    "no_meeting_events" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Meeting Events"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет событий встреч"
+          }
+        }
+      }
+    },
+    "no_meeting_events_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No upcoming meetings with video conference links found in your calendars."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В ваших календарях не найдено предстоящих встреч со ссылками на видеоконференции."
+          }
+        }
+      }
+    },
+    "no_meetings_found" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No meetings found"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Встречи не найдены"
+          }
+        }
+      }
+    },
+    "no_scheduled_notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No scheduled TimelyMeet notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет запланированных уведомлений TimelyMeet"
+          }
+        }
+      }
+    },
+    "no_upcoming_meetings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No upcoming meetings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет предстоящих встреч"
+          }
+        }
+      }
+    },
+    "Notification Sounds" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звуки уведомлений"
+          }
+        }
+      }
+    },
+    "notification_sound_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notification Sound"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звук уведомления"
+          }
+        }
+      }
+    },
+    "Notification: %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уведомление: %@"
+          }
+        }
+      }
+    },
+    "notifications_count" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%d notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%d уведомлений"
+          }
+        }
+      }
+    },
+    "notifications_title" : {
+      "comment" : "Missing Notifications Localizations",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уведомления"
+          }
+        }
+      }
+    },
+    "open_source_release" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Source"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открытый исходный код"
+          }
+        }
+      }
+    },
+    "open_source_release_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Making TimelyMeet open source for community contributions and transparency"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открытие исходного кода TimelyMeet для вклада сообщества и прозрачности"
+          }
+        }
+      }
+    },
+    "open_system_settings" : {
+      "comment" : "Button to open System Settings",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open System Settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть Системные настройки"
+          }
+        }
+      }
+    },
+    "performance_monitoring_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Performance monitoring tracks memory usage, CPU usage, and execution times. This may impact app performance."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мониторинг производительности отслеживает использование памяти, процессора и время выполнения. Это может повлиять на производительность приложения."
+          }
+        }
+      }
+    },
+    "platform" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platform"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Платформа"
+          }
+        }
+      }
+    },
+    "Preview" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предпросмотр"
+          }
+        }
+      }
+    },
+    "preview_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preview"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предварительный просмотр"
+          }
+        }
+      }
+    },
+    "preview_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preview"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предварительный просмотр"
+          }
+        }
+      }
+    },
+    "previous_versions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Previous Versions"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предыдущие версии"
+          }
+        }
+      }
+    },
+    "privacy_policy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Политика конфиденциальности"
+          }
+        }
+      }
+    },
+    "quick_actions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quick Actions"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Быстрые действия"
+          }
+        }
+      }
+    },
+    "quick_actions_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keyboard shortcuts and quick actions"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клавиатурные сочетания и быстрые действия"
+          }
+        }
+      }
+    },
+    "quick_test_notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quick Test Notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Быстрое тестирование уведомлений"
+          }
+        }
+      }
+    },
+    "quit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выход"
+          }
+        }
+      }
+    },
+    "rate_app_store" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate on App Store"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оценить в App Store"
+          }
+        }
+      }
+    },
+    "refresh" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновить"
+          }
+        }
+      }
+    },
+    "release_notes_bugfix" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bug Fixes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Исправления ошибок"
+          }
+        }
+      }
+    },
+    "release_notes_feature" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Features"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новые функции"
+          }
+        }
+      }
+    },
+    "release_notes_improvement" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Improvements"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Улучшения"
+          }
+        }
+      }
+    },
+    "release_notes_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Release Notes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заметки о релизе"
+          }
+        }
+      }
+    },
+    "released_format" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Released: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выпущено: %@"
+          }
+        }
+      }
+    },
+    "remind_later" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remind me later"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Напомнить позже"
+          }
+        }
+      }
+    },
+    "remind_me_in" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remind me in"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Напомнить через"
+          }
+        }
+      }
+    },
+    "reminder_times_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reminder Times"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время напоминаний"
+          }
+        }
+      }
+    },
+    "report_issue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Report Issue"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сообщить о проблеме"
+          }
+        }
+      }
+    },
+    "reset_to_now_plus_5min" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset to Now + 5min"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросить на Сейчас + 5мин"
+          }
+        }
+      }
+    },
+    "schedule_meeting_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Schedule Meeting"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 Запланировать встречу"
+          }
+        }
+      }
+    },
+    "scheduled_workflow_notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scheduled Workflow Notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запланированные уведомления"
+          }
+        }
+      }
+    },
+    "Select" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать"
+          }
+        }
+      }
+    },
+    "select_all" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select All"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать все"
+          }
+        }
+      }
+    },
+    "select_all_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select All"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать все"
+          }
+        }
+      }
+    },
+    "select_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать"
+          }
+        }
+      }
+    },
+    "select_reminder_times_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select when to receive reminders before your meetings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите, когда получать напоминания перед встречами"
+          }
+        }
+      }
+    },
+    "select_section" : {
+      "comment" : "Navigation & UI",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a Section"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите раздел"
+          }
+        }
+      }
+    },
+    "Selected" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрано"
+          }
+        }
+      }
+    },
+    "selected_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selected"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрано"
+          }
+        }
+      }
+    },
+    "selected_count" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%d of %d selected"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%d из %d выбрано"
+          }
+        }
+      }
+    },
+    "send_feedback" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send Feedback"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отправить отзыв"
+          }
+        }
+      }
+    },
+    "settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
+          }
+        }
+      }
+    },
+    "settings_about" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О программе"
+          }
+        }
+      }
+    },
+    "settings_calendar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Календарь"
+          }
+        }
+      }
+    },
+    "settings_developer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Developer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разработчик"
+          }
+        }
+      }
+    },
+    "settings_language" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык"
+          }
+        }
+      }
+    },
+    "settings_menubar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu Bar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Строка меню"
+          }
+        }
+      }
+    },
+    "settings_notifications" : {
+      "comment" : "Settings Categories",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уведомления"
+          }
+        }
+      }
+    },
+    "settings_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TimelyMeet Settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки TimelyMeet"
+          }
+        }
+      }
+    },
+    "settings_whats_new" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's New"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что нового"
+          }
+        }
+      }
+    },
+    "show_event_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show event title"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать название события"
+          }
+        }
+      }
+    },
+    "show_fullscreen_now" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Fullscreen Now"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать полноэкранное сейчас"
+          }
+        }
+      }
+    },
+    "show_meeting_info_when" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show meeting information when:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показывать информацию о встрече когда:"
+          }
+        }
+      }
+    },
+    "show_meeting_time_countdown" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show meeting time countdown"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать обратный отсчёт времени встречи"
+          }
+        }
+      }
+    },
+    "skip_notifications_meeting" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip notifications for this meeting"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пропустить уведомления для этой встречи"
+          }
+        }
+      }
+    },
+    "smart_notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smart Notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Умные уведомления"
+          }
+        }
+      }
+    },
+    "Snooze" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отложить"
+          }
+        }
+      }
+    },
+    "snooze_custom_time" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom snooze time"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Другое время"
+          }
+        }
+      }
+    },
+    "snooze_five_min" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snooze 5 min"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отложить на 5 мин"
+          }
+        }
+      }
+    },
+    "snooze_one_min" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snooze 1 min"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отложить на 1 мин"
+          }
+        }
+      }
+    },
+    "snooze_three_min" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snooze 3 min"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отложить на 3 мин"
+          }
+        }
+      }
+    },
+    "snooze_until_meeting_time" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until meeting starts"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "До начала встречи"
+          }
+        }
+      }
+    },
+    "Sound Selection" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбор звука"
+          }
+        }
+      }
+    },
+    "status_fired" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fired"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Срабатывает"
+          }
+        }
+      }
+    },
+    "status_idle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idle"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ожидание"
+          }
+        }
+      }
+    },
+    "status_paused" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paused"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приостановлено"
+          }
+        }
+      }
+    },
+    "status_started" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Started"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Началась"
+          }
+        }
+      }
+    },
+    "status_starting_now" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starting now"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начинается сейчас"
+          }
+        }
+      }
+    },
+    "status_syncing" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Syncing"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Синхронизация"
+          }
+        }
+      }
+    },
+    "status_unknown" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown status"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Неизвестный статус"
+          }
+        }
+      }
+    },
+    "status_up_to_date" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Up to date"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Актуально"
+          }
+        }
+      }
+    },
+    "supported_languages" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supported Languages"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддерживаемые языки"
+          }
+        }
+      }
+    },
+    "supported_languages_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supported Languages"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддерживаемые языки"
+          }
+        }
+      }
+    },
+    "swift_version" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swift Version"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия Swift"
+          }
+        }
+      }
+    },
+    "sync_now" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sync Now"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Синхронизировать сейчас"
+          }
+        }
+      }
+    },
+    "sync_status" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sync Status"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Статус синхронизации"
+          }
+        }
+      }
+    },
+    "sync_status_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sync Status"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Статус синхронизации"
+          }
+        }
+      }
+    },
+    "system_information" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System Information"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Системная информация"
+          }
+        }
+      }
+    },
+    "team_features" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Team Features"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Командные функции"
+          }
+        }
+      }
+    },
+    "team_features_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collaborative meeting management"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Коллективное управление встречами"
+          }
+        }
+      }
+    },
+    "technical_excellence" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Technical Excellence"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Техническое совершенство"
+          }
+        }
+      }
+    },
+    "terms_of_service" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Service"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Условия использования"
+          }
+        }
+      }
+    },
+    "test_meeting_join" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test Meeting Join"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тест присоединения к митингу"
+          }
+        }
+      }
+    },
+    "test_meeting_url" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test Meeting URL:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL тестовой встречи:"
+          }
+        }
+      }
+    },
+    "testing_tools_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testing tools for notification development"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Инструменты для разработки уведомлений"
+          }
+        }
+      }
+    },
+    "Theme Selection" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбор темы"
+          }
+        }
+      }
+    },
+    "theme_support" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Theme Support"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддержка тем"
+          }
+        }
+      }
+    },
+    "theme_support_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multiple themes and customization options for fullscreen notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Множество тем и параметров настройки для полноэкранных уведомлений"
+          }
+        }
+      }
+    },
+    "time_threshold" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time Threshold"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Временной порог"
+          }
+        }
+      }
+    },
+    "today" : {
+      "comment" : "Misc",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сегодня"
+          }
+        }
+      }
+    },
+    "tomorrow" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tomorrow"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Завтра"
+          }
+        }
+      }
+    },
+    "truncated_characters_note" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Event titles will be truncated to fit the available space"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Названия событий будут обрезаны для размещения в доступном пространстве"
+          }
+        }
+      }
+    },
+    "unknown" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Неизвестно"
+          }
+        }
+      }
+    },
+    "Unknown trigger time" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Неизвестное время срабатывания"
+          }
+        }
+      }
+    },
+    "untitled" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Untitled"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Без названия"
+          }
+        }
+      }
+    },
+    "untitled_event" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Untitled Event"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Событие без названия"
+          }
+        }
+      }
+    },
+    "up_to_date_status" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Up to date"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Актуально"
+          }
+        }
+      }
+    },
+    "upcoming" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upcoming"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предстоящие"
+          }
+        }
+      }
+    },
+    "upcoming_meetings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upcoming Meetings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предстоящие встречи"
+          }
+        }
+      }
+    },
+    "version_format" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@ (%@)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия %@ (%@)"
+          }
+        }
+      }
+    },
+    "version_initial" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version 1.0 - Initial Release"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия 1.0 - Первый выпуск"
+          }
+        }
+      }
+    },
+    "version_label" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия"
+          }
+        }
+      }
+    },
+    "video_conference_settings_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video Conference Settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки видеоконференций"
+          }
+        }
+      }
+    },
+    "video_conferences" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video Conferences"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Видео конференции"
+          }
+        }
+      }
+    },
+    "Visual Themes" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Визуальные темы"
+          }
+        }
+      }
+    },
+    "whats_new_title" : {
+      "comment" : "What's New",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's New"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что нового"
+          }
+        }
+      }
+    },
+    "whatsnew_calendar_sync" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seamless Calendar app integration with automatic background sync"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бесшовная интеграция с Календарем с автоматической фоновой синхронизацией"
+          }
+        }
+      }
+    },
+    "whatsnew_fast_join" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One-click meeting joins with smart platform detection (Zoom, Teams, Google Meet, and more)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Присоединение к встречам одним кликом с умным определением платформ (Zoom, Teams, Google Meet и др.)"
+          }
+        }
+      }
+    },
+    "whatsnew_free_forever" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completely free solution with no subscriptions, ads, or hidden fees"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полностью бесплатное решение без подписок, рекламы и скрытых платежей"
+          }
+        }
+      }
+    },
+    "whatsnew_fullscreen_alerts" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beautiful fullscreen meeting notifications that grab your attention when it matters"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Красивые полноэкранные уведомления о встречах, которые привлекут внимание в нужный момент"
+          }
+        }
+      }
+    },
+    "whatsnew_keyboard_shortcuts" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convenient keyboard shortcuts: ESC to dismiss, Enter to join, S to snooze"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удобные горячие клавиши: ESC закрыть, Enter присоединиться, S отложить"
+          }
+        }
+      }
+    },
+    "whatsnew_menubar_integration" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Native macOS menu bar integration with quick meeting overview and status"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нативная интеграция с меню бар macOS с быстрым обзором встреч и статусом"
+          }
+        }
+      }
+    },
+    "whatsnew_performance" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optimized performance with minimal memory footprint and battery usage"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оптимизированная производительность с минимальным использованием памяти и батареи"
+          }
+        }
+      }
+    },
+    "whatsnew_privacy_first" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy-first design: all data stays on your device"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Конфиденциальность превыше всего: все данные остаются на устройстве"
+          }
+        }
+      }
+    },
+    "whatsnew_reminder_times" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flexible reminder timing: 0s, 30s, 1m, 5m, 10m, 15m - choose what works for you"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Гибкие времена напоминаний: 0с, 30с, 1м, 5м, 10м, 15м - выберите что подходит вам"
+          }
+        }
+      }
+    },
+    "whatsnew_smart_detection" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intelligent URL parsing and Safe Links removal for reliable meeting access"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Умный анализ ссылок и удаление Safe Links для надежного доступа к встречам"
+          }
+        }
+      }
+    },
+    "whatsnew_snooze_options" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Advanced snooze options: 1m, 3m, 5m, custom time, or until meeting starts"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продвинутые опции откладывания: 1м, 3м, 5м, произвольное время или до начала встречи"
+          }
+        }
+      }
+    },
+    "width_points_format" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%d pt"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%d пт"
+          }
+        }
+      }
+    },
+    "width_slider" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Width slider"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слайдер ширины"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

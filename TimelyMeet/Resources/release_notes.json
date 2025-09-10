@@ -1,0 +1,141 @@
+{
+  "releaseNotes": [
+    {
+      "version": "1.2",
+      "date": "2025-09-05",
+      "changes": [
+        {
+          "type": "improvement",
+          "description": {
+            "en": "Streamlined video conference preferences by removing global settings",
+            "ru": "Упрощены настройки видеоконференций путем удаления глобальных параметров"
+          }
+        },
+        {
+          "type": "improvement",
+          "description": {
+            "en": "Updated Facetime provider configuration and removed related deeplink functionality",
+            "ru": "Обновлена конфигурация Facetime и удалена связанная функциональность deeplink"
+          }
+        },
+        {
+          "type": "feature",
+          "description": {
+            "en": "Enhanced notification scheduling and logging capabilities",
+            "ru": "Улучшенные возможности планирования уведомлений и ведения журналов"
+          }
+        },
+        {
+          "type": "bugfix",
+          "description": {
+            "en": "Improved video conference settings logic to use provider-specific recommendations",
+            "ru": "Улучшена логика настроек видеоконференций для использования рекомендаций поставщиков"
+          }
+        },
+        {
+          "type": "bugfix",
+          "description": {
+            "en": "Better handling of unknown video conference providers",
+            "ru": "Улучшенная обработка неизвестных провайдеров видеоконференций"
+          }
+        }
+      ]
+    },
+    {
+      "version": "1.1",
+      "date": "2025-09-04",
+      "changes": [
+        {
+          "type": "improvement",
+          "description": {
+            "en": "Updated meeting details display and improved UI responsiveness",
+            "ru": "Обновлено отображение деталей встреч и улучшена отзывчивость интерфейса"
+          }
+        },
+        {
+          "type": "bugfix",
+          "description": {
+            "en": "Enhanced user interface performance and meeting information presentation",
+            "ru": "Улучшена производительность интерфейса и представление информации о встречах"
+          }
+        }
+      ]
+    },
+    {
+      "version": "1.0",
+      "date": "2025-09-04",
+      "changes": [
+        {
+          "type": "feature",
+          "description": {
+            "en": "Beautiful fullscreen meeting notifications that grab your attention when it matters",
+            "ru": "Красивые полноэкранные уведомления о встречах, которые привлекают ваше внимание в нужный момент"
+          }
+        },
+        {
+          "type": "feature",
+          "description": {
+            "en": "One-click meeting joins with smart platform detection (Zoom, Teams, Google Meet, and more)",
+            "ru": "Присоединение к встречам одним кликом с умным обнаружением платформ (Zoom, Teams, Google Meet и др.)"
+          }
+        },
+        {
+          "type": "feature",
+          "description": {
+            "en": "Native macOS menu bar integration with quick meeting overview and status",
+            "ru": "Встроенная интеграция с панелью меню macOS с быстрым обзором встреч и статусом"
+          }
+        },
+        {
+          "type": "feature",
+          "description": {
+            "en": "Convenient keyboard shortcuts: ESC to dismiss, Enter to join, S to snooze",
+            "ru": "Удобные горячие клавиши: ESC для закрытия, Enter для присоединения, S для отсрочки"
+          }
+        },
+        {
+          "type": "feature",
+          "description": {
+            "en": "Flexible reminder timing: 0s, 30s, 1m, 5m, 10m, 15m - choose what works for you",
+            "ru": "Гибкое время напоминаний: 0с, 30с, 1м, 5м, 10м, 15м - выберите то, что подходит вам"
+          }
+        },
+        {
+          "type": "feature",
+          "description": {
+            "en": "Advanced snooze options: 1m, 3m, 5m, custom time, or until meeting starts",
+            "ru": "Расширенные опции отсрочки: 1м, 3м, 5м, пользовательское время или до начала встречи"
+          }
+        },
+        {
+          "type": "feature",
+          "description": {
+            "en": "Seamless Calendar app integration with automatic background sync",
+            "ru": "Бесшовная интеграция с приложением Календарь с автоматической синхронизацией в фоне"
+          }
+        },
+        {
+          "type": "feature",
+          "description": {
+            "en": "Privacy-first design: all data stays on your device",
+            "ru": "Дизайн с приоритетом конфиденциальности: все данные остаются на вашем устройстве"
+          }
+        },
+        {
+          "type": "feature",
+          "description": {
+            "en": "Optimized performance with minimal memory footprint and battery usage",
+            "ru": "Оптимизированная производительность с минимальным потреблением памяти и батареи"
+          }
+        },
+        {
+          "type": "feature",
+          "description": {
+            "en": "Completely free solution with no subscriptions, ads, or hidden fees",
+            "ru": "Полностью бесплатное решение без подписок, рекламы или скрытых платежей"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="NotificationSetting" representedClassName="NotificationSetting" syncable="YES" codeGenerationType="class">
+        <attribute name="eventIdentifier" optional="NO" attributeType="String"/>
+        <attribute name="isEnabled" optional="NO" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="reminderMinutes" optional="NO" attributeType="Integer 32" defaultValueString="5" usesScalarValueType="YES"/>
+        <attribute name="soundEnabled" optional="NO" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="lastModified" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="CalendarSetting" representedClassName="CalendarSetting" syncable="YES" codeGenerationType="class">
+        <attribute name="calendarIdentifier" optional="NO" attributeType="String"/>
+        <attribute name="isEnabled" optional="NO" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="title" optional="NO" attributeType="String"/>
+        <attribute name="lastModified" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="SkippedMeeting" representedClassName="SkippedMeeting" syncable="YES" codeGenerationType="class">
+        <attribute name="eventIdentifier" optional="NO" attributeType="String"/>
+        <attribute name="eventTitle" optional="YES" attributeType="String"/>
+        <attribute name="meetingDate" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="skippedAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="calendarIdentifier" optional="YES" attributeType="String"/>
+    </entity>
+</model>

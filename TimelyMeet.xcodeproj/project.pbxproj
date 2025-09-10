@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		F568133E2E5B0F0F00CAD16E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F56813272E5B0F0E00CAD16E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F568132E2E5B0F0E00CAD16E;
+			remoteInfo = TimelyMeet;
+		};
+		F56813482E5B0F1000CAD16E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F56813272E5B0F0E00CAD16E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F568132E2E5B0F0E00CAD16E;
+			remoteInfo = TimelyMeet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F568132F2E5B0F0E00CAD16E /* TimelyMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimelyMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F568133D2E5B0F0F00CAD16E /* TimelyMeetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyMeetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F56813472E5B0F1000CAD16E /* TimelyMeetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyMeetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F56813312E5B0F0E00CAD16E /* TimelyMeet */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TimelyMeet;
+			sourceTree = "<group>";
+		};
+		F56813402E5B0F0F00CAD16E /* TimelyMeetTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TimelyMeetTests;
+			sourceTree = "<group>";
+		};
+		F568134A2E5B0F1000CAD16E /* TimelyMeetUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TimelyMeetUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F568132C2E5B0F0E00CAD16E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F568133A2E5B0F0F00CAD16E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F56813442E5B0F1000CAD16E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F56813262E5B0F0E00CAD16E = {
+			isa = PBXGroup;
+			children = (
+				F56813312E5B0F0E00CAD16E /* TimelyMeet */,
+				F56813402E5B0F0F00CAD16E /* TimelyMeetTests */,
+				F568134A2E5B0F1000CAD16E /* TimelyMeetUITests */,
+				F56813302E5B0F0E00CAD16E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F56813302E5B0F0E00CAD16E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F568132F2E5B0F0E00CAD16E /* TimelyMeet.app */,
+				F568133D2E5B0F0F00CAD16E /* TimelyMeetTests.xctest */,
+				F56813472E5B0F1000CAD16E /* TimelyMeetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F568132E2E5B0F0E00CAD16E /* TimelyMeet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F56813512E5B0F1000CAD16E /* Build configuration list for PBXNativeTarget "TimelyMeet" */;
+			buildPhases = (
+				F568132B2E5B0F0E00CAD16E /* Sources */,
+				F568132C2E5B0F0E00CAD16E /* Frameworks */,
+				F568132D2E5B0F0E00CAD16E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F56813312E5B0F0E00CAD16E /* TimelyMeet */,
+			);
+			name = TimelyMeet;
+			packageProductDependencies = (
+			);
+			productName = TimelyMeet;
+			productReference = F568132F2E5B0F0E00CAD16E /* TimelyMeet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F568133C2E5B0F0F00CAD16E /* TimelyMeetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F56813542E5B0F1000CAD16E /* Build configuration list for PBXNativeTarget "TimelyMeetTests" */;
+			buildPhases = (
+				F56813392E5B0F0F00CAD16E /* Sources */,
+				F568133A2E5B0F0F00CAD16E /* Frameworks */,
+				F568133B2E5B0F0F00CAD16E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F568133F2E5B0F0F00CAD16E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F56813402E5B0F0F00CAD16E /* TimelyMeetTests */,
+			);
+			name = TimelyMeetTests;
+			packageProductDependencies = (
+			);
+			productName = TimelyMeetTests;
+			productReference = F568133D2E5B0F0F00CAD16E /* TimelyMeetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F56813462E5B0F1000CAD16E /* TimelyMeetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F56813572E5B0F1000CAD16E /* Build configuration list for PBXNativeTarget "TimelyMeetUITests" */;
+			buildPhases = (
+				F56813432E5B0F1000CAD16E /* Sources */,
+				F56813442E5B0F1000CAD16E /* Frameworks */,
+				F56813452E5B0F1000CAD16E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F56813492E5B0F1000CAD16E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F568134A2E5B0F1000CAD16E /* TimelyMeetUITests */,
+			);
+			name = TimelyMeetUITests;
+			packageProductDependencies = (
+			);
+			productName = TimelyMeetUITests;
+			productReference = F56813472E5B0F1000CAD16E /* TimelyMeetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F56813272E5B0F0E00CAD16E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					F568132E2E5B0F0E00CAD16E = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					F568133C2E5B0F0F00CAD16E = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = F568132E2E5B0F0E00CAD16E;
+					};
+					F56813462E5B0F1000CAD16E = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = F568132E2E5B0F0E00CAD16E;
+					};
+				};
+			};
+			buildConfigurationList = F568132A2E5B0F0E00CAD16E /* Build configuration list for PBXProject "TimelyMeet" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = F56813262E5B0F0E00CAD16E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F56813302E5B0F0E00CAD16E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F568132E2E5B0F0E00CAD16E /* TimelyMeet */,
+				F568133C2E5B0F0F00CAD16E /* TimelyMeetTests */,
+				F56813462E5B0F1000CAD16E /* TimelyMeetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F568132D2E5B0F0E00CAD16E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F568133B2E5B0F0F00CAD16E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F56813452E5B0F1000CAD16E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F568132B2E5B0F0E00CAD16E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F56813392E5B0F0F00CAD16E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F56813432E5B0F1000CAD16E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F568133F2E5B0F0F00CAD16E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F568132E2E5B0F0E00CAD16E /* TimelyMeet */;
+			targetProxy = F568133E2E5B0F0F00CAD16E /* PBXContainerItemProxy */;
+		};
+		F56813492E5B0F1000CAD16E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F568132E2E5B0F0E00CAD16E /* TimelyMeet */;
+			targetProxy = F56813482E5B0F1000CAD16E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F568134F2E5B0F1000CAD16E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F56813502E5B0F1000CAD16E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		F56813522E5B0F1000CAD16E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimelyMeet/TimelyMeet.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = KY6MPSHF75;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimelyMeet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TimelyMeet;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = org.romancha.TimelyMeet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F56813532E5B0F1000CAD16E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimelyMeet/TimelyMeet.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = KY6MPSHF75;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimelyMeet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TimelyMeet;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = org.romancha.TimelyMeet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F56813552E5B0F1000CAD16E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.romancha.TimelyMeetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimelyMeet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TimelyMeet";
+			};
+			name = Debug;
+		};
+		F56813562E5B0F1000CAD16E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.romancha.TimelyMeetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimelyMeet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TimelyMeet";
+			};
+			name = Release;
+		};
+		F56813582E5B0F1000CAD16E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.romancha.TimelyMeetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TimelyMeet;
+			};
+			name = Debug;
+		};
+		F56813592E5B0F1000CAD16E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.romancha.TimelyMeetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TimelyMeet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F568132A2E5B0F0E00CAD16E /* Build configuration list for PBXProject "TimelyMeet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F568134F2E5B0F1000CAD16E /* Debug */,
+				F56813502E5B0F1000CAD16E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F56813512E5B0F1000CAD16E /* Build configuration list for PBXNativeTarget "TimelyMeet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F56813522E5B0F1000CAD16E /* Debug */,
+				F56813532E5B0F1000CAD16E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F56813542E5B0F1000CAD16E /* Build configuration list for PBXNativeTarget "TimelyMeetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F56813552E5B0F1000CAD16E /* Debug */,
+				F56813562E5B0F1000CAD16E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F56813572E5B0F1000CAD16E /* Build configuration list for PBXNativeTarget "TimelyMeetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F56813582E5B0F1000CAD16E /* Debug */,
+				F56813592E5B0F1000CAD16E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F56813272E5B0F0E00CAD16E /* Project object */;
+}
