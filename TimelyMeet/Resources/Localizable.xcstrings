@@ -1633,6 +1633,40 @@
         }
       }
     },
+    "feature_open_source" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Source"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открытый исходный код"
+          }
+        }
+      }
+    },
+    "feature_open_source_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full source code is available on GitHub for transparency and community contributions"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полный исходный код доступен на GitHub для прозрачности и вклада сообщества"
+          }
+        }
+      }
+    },
     "feature_shortcuts" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3706,6 +3740,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выбор звука"
+          }
+        }
+      }
+    },
+    "source_code" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source Code"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Исходный код"
           }
         }
       }

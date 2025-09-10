@@ -53,7 +53,7 @@ struct WhatsNewView: View {
                     
                     VStack(alignment: .leading, spacing: 8) {
                         UpcomingFeatureRow(icon: "paintbrush.fill", title: "theme_support".localized(), description: "theme_support_description".localized())
-                        UpcomingFeatureRow(icon: "doc.text.fill", title: "open_source_release".localized(), description: "open_source_release_description".localized())
+                        CompletedFeatureRow(icon: "terminal.fill", title: "open_source_release".localized(), description: "open_source_release_description".localized())
                     }
                 }
             }
@@ -91,15 +91,22 @@ struct WhatsNewView: View {
                         }
                         .buttonStyle(.borderedProminent)
                         
-//                        Button("rate_app_store".localized()) {
-//                            // Open App Store rating page when available
-//                        }
-//                        .buttonStyle(.bordered)
+                        Button("rate_app_store".localized()) {
+                            if let url = URL(string: "macappstore://apps.apple.com/app/id6543210987?action=write-review") {
+                                NSWorkspace.shared.open(url)
+                            }
+                        }
+                        .buttonStyle(.bordered)
                         
-//                        Button("follow_updates".localized()) {
-//                            // Open website or social media when available
-//                        }
-//                        .buttonStyle(.bordered)
+                        Button {
+                            NSWorkspace.shared.open(URL(string: "https://github.com/Romancha/timelymeet")!)
+                        } label: {
+                            HStack(spacing: 4) {
+                                Image(systemName: "terminal.fill")
+                                Text("source_code".localized())
+                            }
+                        }
+                        .buttonStyle(.bordered)
                     }
                 }
             }
@@ -133,6 +140,37 @@ struct UpcomingFeatureRow: View {
             
             Image(systemName: "clock.circle")
                 .foregroundColor(.orange)
+                .font(.caption)
+        }
+        .padding(.vertical, 4)
+    }
+}
+
+struct CompletedFeatureRow: View {
+    let icon: String
+    let title: String
+    let description: String
+    
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: icon)
+                .foregroundColor(.blue)
+                .frame(width: 20)
+            
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.body)
+                    .fontWeight(.medium)
+                
+                Text(description)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            
+            Spacer()
+            
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundColor(.green)
                 .font(.caption)
         }
         .padding(.vertical, 4)

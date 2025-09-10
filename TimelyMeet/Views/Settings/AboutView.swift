@@ -87,6 +87,7 @@ struct AboutView: View {
                             FeatureRowWithDescription(icon: "keyboard.fill", title: "feature_shortcuts".localized(), description: "feature_shortcuts_description".localized())
                             FeatureRowWithDescription(icon: "heart.fill", title: "feature_free_solution".localized(), description: "feature_free_solution_description".localized())
                             FeatureRowWithDescription(icon: "lock.shield.fill", title: "feature_data_protection".localized(), description: "feature_data_protection_description".localized())
+                            FeatureRowWithDescription(icon: "terminal.fill", title: "feature_open_source".localized(), description: "feature_open_source_description".localized())
                         }
                     }
                 }
@@ -122,6 +123,16 @@ struct AboutView: View {
                             
                             if let url = URL(string: "mailto:romanchabest55@gmail.com?subject=\(encodedSubject)&body=\(encodedBody)") {
                                 NSWorkspace.shared.open(url)
+                            }
+                        }
+                        .buttonStyle(.link)
+                        
+                        Button {
+                            NSWorkspace.shared.open(URL(string: "https://github.com/Romancha/timelymeet")!)
+                        } label: {
+                            HStack(spacing: 4) {
+                                Image(systemName: "terminal.fill")
+                                Text("source_code".localized())
                             }
                         }
                         .buttonStyle(.link)
