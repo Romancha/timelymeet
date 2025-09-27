@@ -21,6 +21,8 @@ extension EKEvent {
 struct MenuBarView: View {
     @EnvironmentObject private var calendarViewModel: CalendarViewModel
     @EnvironmentObject private var notificationScheduler: NotificationScheduler
+    @State private var currentTime = Date()
+    @State private var timerCancellable: Timer?
 
     private let logger = Logger(subsystem: "org.romancha.timelymeet", category: "MenuBarView")
 
@@ -30,19 +32,19 @@ struct MenuBarView: View {
             CalendarPermissionNotification()
 
             // Next meeting section
-            NextMeetingSection()
+            NextMeetingSection(currentTime: currentTime)
 
             Divider()
                 .padding(.vertical, 6)
 
             // Today's meetings section
-            TodayMeetingsSection()
+            TodayMeetingsSection(currentTime: currentTime)
 
             Divider()
                 .padding(.vertical, 6)
 
             // Upcoming meetings list
-            UpcomingMeetingsSection()
+            UpcomingMeetingsSection(currentTime: currentTime)
 
             Divider()
                 .padding(.vertical, 6)
@@ -53,6 +55,27 @@ struct MenuBarView: View {
         .padding(10)
         .frame(minWidth: 320, maxWidth: 320, alignment: .leading)
         .background(Color.clear)
+        .onAppear {
+            currentTime = Date()
+            startTimer()
+        }
+        .onDisappear {
+            stopTimer()
+        }
+    }
+
+    private func startTimer() {
+        stopTimer() // Ensure no duplicate timers
+        timerCancellable = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
+            currentTime = Date()
+        }
+        logger.debug("Timer started for MenuBarView")
+    }
+
+    private func stopTimer() {
+        timerCancellable?.invalidate()
+        timerCancellable = nil
+        logger.debug("Timer stopped for MenuBarView")
     }
 }
 
@@ -60,7 +83,8 @@ struct NextMeetingSection: View {
     @EnvironmentObject private var calendarViewModel: CalendarViewModel
     @EnvironmentObject private var notificationScheduler: NotificationScheduler
     @Environment(\.managedObjectContext) private var managedObjectContext
-    
+    let currentTime: Date
+
     private let logger = Logger(subsystem: "org.romancha.timelymeet", category: "NextMeetingSection")
     
     
@@ -184,7 +208,7 @@ struct NextMeetingSection: View {
     
     private func timeUntilMeeting(_ event: EKEvent) -> String {
         let meetingStatus = calendarViewModel.getMeetingStatus(for: event)
-        let now = Date()
+        let now = currentTime
 
         switch meetingStatus {
         case .current:
@@ -267,6 +291,7 @@ struct NextMeetingSection: View {
 
 struct TodayMeetingsSection: View {
     @EnvironmentObject private var calendarViewModel: CalendarViewModel
+    let currentTime: Date
 
     private let maxDisplayEvents = 6
 
@@ -289,7 +314,7 @@ struct TodayMeetingsSection: View {
                 }
 
                 ForEach(Array(todayEvents.prefix(maxDisplayEvents)), id: \.uniqueID) { event in
-                    MenuBarEventRow(event: event, showDate: false)
+                    MenuBarEventRow(event: event, showDate: false, currentTime: currentTime)
                 }
 
                 if todayEvents.count > maxDisplayEvents {
@@ -305,7 +330,8 @@ struct TodayMeetingsSection: View {
 
 struct UpcomingMeetingsSection: View {
     @EnvironmentObject private var calendarViewModel: CalendarViewModel
-    
+    let currentTime: Date
+
     private let maxDisplayEvents = 8
     
     var body: some View {
@@ -355,7 +381,7 @@ struct UpcomingMeetingsSection: View {
                         
                         // Events in this group
                         ForEach(group.events, id: \.uniqueID) { event in
-                            MenuBarEventRow(event: event, showDate: group.showDate)
+                            MenuBarEventRow(event: event, showDate: group.showDate, currentTime: currentTime)
                                 .padding(.leading, 8)
                         }
                     }
@@ -430,10 +456,11 @@ struct EventGroup {
 struct MenuBarEventRow: View {
     let event: EKEvent
     let showDate: Bool
+    let currentTime: Date
     @EnvironmentObject private var calendarViewModel: CalendarViewModel
     @EnvironmentObject private var notificationScheduler: NotificationScheduler
     @Environment(\.managedObjectContext) private var managedObjectContext
-    
+
     private let logger = Logger(subsystem: "org.romancha.timelymeet", category: "MenuBarEventRow")
     
     
@@ -443,9 +470,10 @@ struct MenuBarEventRow: View {
         return formatter
     }()
     
-    init(event: EKEvent, showDate: Bool = true) {
+    init(event: EKEvent, showDate: Bool = true, currentTime: Date = Date()) {
         self.event = event
         self.showDate = showDate
+        self.currentTime = currentTime
     }
     
     var body: some View {
