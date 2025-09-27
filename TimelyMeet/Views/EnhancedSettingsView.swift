@@ -19,8 +19,14 @@ struct EnhancedSettingsView: View {
     @EnvironmentObject private var backgroundSync: BackgroundSyncService
     @EnvironmentObject private var developerModeService: DeveloperModeService
     @EnvironmentObject private var localizationManager: LocalizationManager
-    
-    @State private var selectedTab: SettingsTab = .notifications
+
+    let initialTab: SettingsTab
+    @State private var selectedTab: SettingsTab
+
+    init(initialTab: SettingsTab = .notifications) {
+        self.initialTab = initialTab
+        self._selectedTab = State(initialValue: initialTab)
+    }
     
     var body: some View {
         NavigationSplitView {

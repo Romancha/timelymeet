@@ -159,7 +159,7 @@ struct NextMeetingSection: View {
                             }
                             .font(.caption)
                         }
-                        .buttonStyle(.liquidGlass(isProminent: true, size: .small))
+                        .buttonStyle(.liquidGlass(isProminent: true, size: .mini))
                         .disabled(isSkipped)
                     }
                 }
@@ -623,56 +623,83 @@ struct QuickActionsSection: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            VStack(spacing: 6) {
-                HStack(spacing: 8) {
-                    Button(action: {
-                        Task {
-                            await calendarViewModel.loadCalendarsAndEvents()
-                        }
-                    }) {
-                        HStack {
-                            Image(systemName: "arrow.clockwise")
-                            Text("refresh".localized())
-                        }
-                        .font(.caption)
-                        .frame(maxWidth: .infinity)
+            HStack(spacing: 12) {
+                Spacer()
+
+                Button(action: {
+                    Task {
+                        await calendarViewModel.loadCalendarsAndEvents()
                     }
-                    .buttonStyle(.liquidGlass(isProminent: false, size: .small))
-                    .disabled(calendarViewModel.isLoading)
-                    
-                    Button(action: {
-                        // Close menu first, then open settings (Apple HIG guidelines)
-                        if let menuBarExtra = NSApp.windows.first(where: { $0.className.contains("MenuBarExtra") }) {
-                            menuBarExtra.orderOut(nil)
-                        }
-                        
-                        // Slight delay to ensure menu closes before opening settings
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                            shouldOpenSettings = true
-                        }
-                    }) {
-                        HStack {
-                            Image(systemName: "gearshape")
-                            Text("settings".localized())
-                        }
-                        .font(.caption)
-                        .frame(maxWidth: .infinity)
-                    }
-                    .buttonStyle(.liquidGlass(isProminent: false, size: .small))
+                }) {
+                    Image(systemName: "arrow.clockwise")
+                        .font(.footnote)
+                        .foregroundColor(.secondary)
                 }
-                
+                .buttonStyle(.plain)
+                .disabled(calendarViewModel.isLoading)
+                .help("refresh".localized())
+
+                Divider()
+                    .frame(height: 12)
+
+                Button(action: {
+                    // Close menu first, then open about (Apple HIG guidelines)
+                    if let menuBarExtra = NSApp.windows.first(where: { $0.className.contains("MenuBarExtra") }) {
+                        menuBarExtra.orderOut(nil)
+                    }
+
+                    // Slight delay to ensure menu closes before opening about
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        SettingsWindowManager.shared.openAbout()
+                    }
+                }) {
+                    Image(systemName: "info.circle")
+                        .font(.footnote)
+                        .foregroundColor(.secondary)
+                }
+                .buttonStyle(.plain)
+                .help("about_meetalert".localized())
+
+                Divider()
+                    .frame(height: 12)
+
+                Button(action: {
+                    // Close menu first, then open settings (Apple HIG guidelines)
+                    if let menuBarExtra = NSApp.windows.first(where: { $0.className.contains("MenuBarExtra") }) {
+                        menuBarExtra.orderOut(nil)
+                    }
+
+                    // Slight delay to ensure menu closes before opening settings
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        shouldOpenSettings = true
+                    }
+                }) {
+                    Image(systemName: "gearshape")
+                        .font(.footnote)
+                        .foregroundColor(.secondary)
+                }
+                .buttonStyle(.plain)
+                .help("settings".localized())
+
+                Divider()
+                    .frame(height: 12)
+
                 Button(action: {
                     NSApplication.shared.terminate(nil)
                 }) {
-                    HStack {
-                        Image(systemName: "power")
-                        Text("quit".localized())
-                    }
-                    .font(.caption)
-                    .frame(maxWidth: .infinity)
+                    Image(systemName: "power")
+                        .font(.footnote)
+                        .foregroundColor(.secondary)
                 }
-                .buttonStyle(.liquidGlass(isProminent: false, size: .small))
+                .buttonStyle(.plain)
+                .help("quit".localized())
             }
+            .padding(.vertical, 4)
+            .padding(.horizontal, 8)
+            .background(
+                RoundedRectangle(cornerRadius: 6, style: .continuous)
+                    .fill(Color.primary.opacity(0.03))
+            )
         }
         .onChange(of: shouldOpenSettings) { _, newValue in
             if newValue {

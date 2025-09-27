@@ -27,6 +27,7 @@ class SettingsWindowController: NSWindowController {
         notificationScheduler: NotificationScheduler,
         backgroundSync: BackgroundSyncService,
         localizationManager: LocalizationManager,
+        initialTab: SettingsTab = .notifications,
         onClose: @escaping () -> Void
     ) {
         self.onClose = onClose
@@ -50,7 +51,7 @@ class SettingsWindowController: NSWindowController {
         }
         
         // Create hosting view with proper bridge options
-        let settingsView = EnhancedSettingsView()
+        let settingsView = EnhancedSettingsView(initialTab: initialTab)
             .environmentObject(appModel)
             .environmentObject(calendarViewModel)
             .environmentObject(menuBarService)
@@ -127,7 +128,8 @@ class SettingsWindowManager: ObservableObject {
         developerModeService: DeveloperModeService? = nil,
         notificationScheduler: NotificationScheduler? = nil,
         backgroundSync: BackgroundSyncService? = nil,
-        localizationManager: LocalizationManager = LocalizationManager.shared
+        localizationManager: LocalizationManager = LocalizationManager.shared,
+        initialTab: SettingsTab = .notifications
     ) {
         // If settings already open, bring to front following Apple HIG guidelines
         if let existingController = settingsWindowController,
@@ -175,6 +177,7 @@ class SettingsWindowManager: ObservableObject {
             notificationScheduler: notificationSched,
             backgroundSync: backgroundSvc,
             localizationManager: localizationMgr,
+            initialTab: initialTab,
             onClose: { [weak self] in
                 self?.settingsWindowController = nil
             }
@@ -197,8 +200,12 @@ class SettingsWindowManager: ObservableObject {
     func openBasicSettings() {
         openSettings()
     }
-    
+
     func openAdvancedSettings() {
         openSettings()
+    }
+
+    func openAbout() {
+        openSettings(initialTab: .about)
     }
 }
