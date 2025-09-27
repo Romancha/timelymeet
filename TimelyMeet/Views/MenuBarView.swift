@@ -85,18 +85,19 @@ struct NextMeetingSection: View {
                     HStack {
                         Text(nextEvent.title ?? "untitled".localized())
                             .font(.subheadline)
-                            .fontWeight(isCurrent ? .bold : .semibold)
+                            .fontWeight(isCurrent ? .semibold : .medium)
                             .strikethrough(isSkipped)
                             .foregroundColor(
                                 isSkipped ? .primary :
-                                isCurrent ? .orange : .secondary
+                                isCurrent ? .primary : .secondary
                             )
 
                         // Current meeting indicator
                         if isCurrent {
-                            Image(systemName: "record.circle.fill")
+                            Image(systemName: "circle.inset.filled")
                                 .font(.caption)
-                                .foregroundColor(.red)
+                                .foregroundColor(.accentColor)
+                                .symbolEffect(.pulse.wholeSymbol, options: .repeating)
                         }
 
                         if isSkipped {
@@ -133,7 +134,7 @@ struct NextMeetingSection: View {
                             .fontWeight(.semibold)
                             .foregroundColor(
                                 isSkipped ? .secondary :
-                                isCurrent ? .orange : .primary
+                                isCurrent ? .accentColor : .primary
                             )
                         Spacer()
                         Text(nextEvent.startDate, style: .time)
@@ -163,8 +164,14 @@ struct NextMeetingSection: View {
                 }
                 .padding(.vertical, 4)
                 .padding(.horizontal, 8)
-                .background(isCurrent ? Color.orange.opacity(0.1) : Color.blue.opacity(0.05))
-                .cornerRadius(8)
+                .background(
+                    RoundedRectangle(cornerRadius: 6, style: .continuous)
+                        .fill(isCurrent ? Color.accentColor.opacity(0.08) : Color.blue.opacity(0.04))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                                .stroke(isCurrent ? Color.accentColor.opacity(0.2) : Color.clear, lineWidth: 0.5)
+                        )
+                )
             } else {
                 Text("no_upcoming_meetings".localized())
                     .font(.subheadline)
@@ -461,23 +468,24 @@ struct MenuBarEventRow: View {
                 HStack {
                     Text(event.title ?? "untitled".localized())
                         .font(.caption)
-                        .fontWeight(meetingStatus == .current ? .semibold : .medium)
+                        .fontWeight(meetingStatus == .current ? .medium : .regular)
                         .lineLimit(1)
                         .strikethrough(isSkipped || meetingStatus == .past)
                         .foregroundColor(
                             isSkipped ? .secondary :
-                            meetingStatus == .current ? .orange :
+                            meetingStatus == .current ? .primary :
                             meetingStatus == .past ? .secondary : .primary
                         )
 
                     // Meeting status indicator
                     switch meetingStatus {
                     case .current:
-                        Image(systemName: "record.circle.fill")
+                        Image(systemName: "circle.inset.filled")
                             .font(.caption2)
-                            .foregroundColor(.red)
+                            .foregroundColor(.accentColor)
+                            .symbolEffect(.pulse.wholeSymbol, options: .repeating)
                     case .past:
-                        Image(systemName: "checkmark.circle.fill")
+                        Image(systemName: "checkmark.circle")
                             .font(.caption2)
                             .foregroundColor(.secondary)
                     case .upcoming:
@@ -500,7 +508,7 @@ struct MenuBarEventRow: View {
                     .font(.caption2)
                     .foregroundColor(
                         isSkipped || meetingStatus == .past ? .secondary :
-                        meetingStatus == .current ? .orange : .primary
+                        meetingStatus == .current ? .accentColor : .primary
                     )
                 }
 
@@ -509,7 +517,7 @@ struct MenuBarEventRow: View {
                     Text(meetingStatus == .current ? "status_ongoing".localized() : "status_ended".localized())
                         .font(.caption2)
                         .fontWeight(.medium)
-                        .foregroundColor(meetingStatus == .current ? .orange : .secondary)
+                        .foregroundColor(meetingStatus == .current ? .accentColor : .secondary)
                 }
             }
 
@@ -537,8 +545,14 @@ struct MenuBarEventRow: View {
         }
         .padding(.vertical, 2)
         .padding(.horizontal, 4)
-        .background(meetingStatus == .current ? Color.orange.opacity(0.1) : Color.clear)
-        .cornerRadius(4)
+        .background(
+            RoundedRectangle(cornerRadius: 4, style: .continuous)
+                .fill(meetingStatus == .current ? Color.accentColor.opacity(0.06) : Color.clear)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 4, style: .continuous)
+                        .stroke(meetingStatus == .current ? Color.accentColor.opacity(0.15) : Color.clear, lineWidth: 0.5)
+                )
+        )
         .contentShape(Rectangle())
         .onTapGesture {
             if !isSkipped, let videoInfo = calendarViewModel.getVideoConferenceInfo(for: event) {
