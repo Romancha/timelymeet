@@ -178,15 +178,16 @@ struct ProviderSettingsRow: View {
         .background(
             Group {
                 if hasCustomSettings {
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(Color.blue.opacity(0.08))
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(.regularMaterial)
                         .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.blue.opacity(0.3), lineWidth: 1)
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .stroke(Color.accentColor.opacity(0.3), lineWidth: 1)
                         )
+                        .shadow(color: .black.opacity(0.05), radius: 8, y: 4)
                 } else {
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(Color.clear)
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(.ultraThinMaterial)
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color.gray.opacity(0.2), lineWidth: 1)

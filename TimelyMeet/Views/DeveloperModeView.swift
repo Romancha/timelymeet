@@ -576,7 +576,7 @@ struct FullscreenNotificationRow: View {
             .font(.caption)
             .foregroundColor(.red)
             .frame(width: 16, height: 16)
-            .background(Color.red.opacity(0.1))
+            .background(Color.red.opacity(0.05))
             .cornerRadius(8)
         }
         .padding(.horizontal, 8)
@@ -585,7 +585,7 @@ struct FullscreenNotificationRow: View {
         .cornerRadius(6)
         .overlay(
             RoundedRectangle(cornerRadius: 6)
-                .stroke(Color.orange.opacity(0.3), lineWidth: 0.5)
+                .stroke(Color.accentColor.opacity(0.2), lineWidth: 0.5)
         )
         .onAppear {
             updateTimeRemaining()
@@ -736,7 +736,7 @@ struct SystemNotificationRow: View {
             .font(.caption)
             .foregroundColor(.red)
             .frame(width: 16, height: 16)
-            .background(Color.red.opacity(0.1))
+            .background(Color.red.opacity(0.05))
             .cornerRadius(8)
         }
         .padding(.horizontal, 8)

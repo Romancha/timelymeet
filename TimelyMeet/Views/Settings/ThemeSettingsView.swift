@@ -91,8 +91,8 @@ struct ThemePreviewCard: View {
                                         .foregroundColor(.gray)
                                 )
                             
-                            RoundedRectangle(cornerRadius: 4)
-                                .stroke(Color.orange, lineWidth: 1)
+                            Capsule()
+                                .stroke(.orange, lineWidth: 1)
                                 .frame(width: 30, height: 12)
                                 .overlay(
                                     Text("Snooze")
@@ -100,8 +100,8 @@ struct ThemePreviewCard: View {
                                         .foregroundColor(.orange)
                                 )
                             
-                            RoundedRectangle(cornerRadius: 4)
-                                .fill(Color.blue)
+                            Capsule()
+                                .fill(Color.accentColor)
                                 .frame(width: 30, height: 12)
                                 .overlay(
                                     Text("Join")
@@ -114,9 +114,34 @@ struct ThemePreviewCard: View {
                         .padding(6)
                 )
                 .frame(height: 140)
+                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .background(
+                    ZStack {
+                        // Base glass layer
+                        RoundedRectangle(cornerRadius: 16, style: .continuous)
+                            .fill(.ultraThinMaterial)
+
+                        // Dynamic highlight
+                        LinearGradient(
+                            colors: [.white.opacity(0.2), .clear],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                    }
+                )
                 .overlay(
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke(isSelected ? Color.accentColor : Color.clear, lineWidth: 3)
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .stroke(
+                            isSelected ? Color.accentColor : Color.clear,
+                            lineWidth: isSelected ? 2 : 0
+                        )
+                        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: isSelected)
+                )
+                .shadow(
+                    color: isSelected ? Color.accentColor.opacity(0.2) : .black.opacity(0.05),
+                    radius: isSelected ? 15 : 8,
+                    y: isSelected ? 8 : 4
                 )
             
             Text(theme.displayName)
@@ -131,14 +156,14 @@ struct ThemePreviewCard: View {
                 Button("Selected") {
                     onSelect()
                 }
-                .buttonStyle(BorderedProminentButtonStyle())
+                .buttonStyle(.liquidGlass(isProminent: true, size: .small))
                 .controlSize(.small)
                 .disabled(true)
             } else {
                 Button("Select") {
                     onSelect()
                 }
-                .buttonStyle(BorderedButtonStyle())
+                .buttonStyle(.liquidGlass(isProminent: false, size: .small))
                 .controlSize(.small)
             }
         }

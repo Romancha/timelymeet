@@ -21,36 +21,36 @@ extension EKEvent {
 struct MenuBarView: View {
     @EnvironmentObject private var calendarViewModel: CalendarViewModel
     @EnvironmentObject private var notificationScheduler: NotificationScheduler
-    
+
     private let logger = Logger(subsystem: "org.romancha.timelymeet", category: "MenuBarView")
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             // Calendar permission notification (if needed)
             CalendarPermissionNotification()
-            
+
             // Next meeting section
             NextMeetingSection()
 
             Divider()
-                .padding(.vertical, 8)
+                .padding(.vertical, 6)
 
             // Today's meetings section
             TodayMeetingsSection()
 
             Divider()
-                .padding(.vertical, 8)
+                .padding(.vertical, 6)
 
             // Upcoming meetings list
             UpcomingMeetingsSection()
-            
+
             Divider()
-                .padding(.vertical, 8)
-            
+                .padding(.vertical, 6)
+
             // Quick actions
             QuickActionsSection()
         }
-        .padding(12)
+        .padding(10)
         .frame(minWidth: 320, maxWidth: 320, alignment: .leading)
         .background(Color.clear)
     }
@@ -65,9 +65,11 @@ struct NextMeetingSection: View {
     
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: 6) {
             HStack {
                 Image(systemName: "clock.fill")
+                    .foregroundColor(.accentColor)
+                    .symbolRenderingMode(.hierarchical)
                 Text("next_meeting".localized())
                     .font(.headline)
                     .fontWeight(.semibold)
@@ -153,12 +155,11 @@ struct NextMeetingSection: View {
                         }) {
                             HStack {
                                 Image(systemName: videoInfo.platform.iconName)
-                                Text("Join \(videoInfo.platform.rawValue)")
+                                Text("\("join_meeting".localized()) \(videoInfo.platform.rawValue)")
                             }
                             .font(.caption)
                         }
-                        .buttonStyle(.borderedProminent)
-                        .controlSize(.small)
+                        .buttonStyle(.liquidGlass(isProminent: true, size: .small))
                         .disabled(isSkipped)
                     }
                 }
@@ -273,10 +274,11 @@ struct TodayMeetingsSection: View {
         let todayEvents = Array(calendarViewModel.todayEvents.prefix(maxDisplayEvents))
 
         if !todayEvents.isEmpty {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: 6) {
                 HStack {
                     Image(systemName: "calendar.circle")
-                        .foregroundColor(.primary)
+                        .foregroundColor(.blue)
+                        .symbolRenderingMode(.hierarchical)
                     Text("today_section".localized())
                         .font(.headline)
                         .fontWeight(.semibold)
@@ -313,7 +315,8 @@ struct UpcomingMeetingsSection: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Image(systemName: "calendar")
-                    .foregroundColor(.primary)
+                    .foregroundColor(.green)
+                    .symbolRenderingMode(.hierarchical)
                 Text("upcoming".localized())
                     .font(.headline)
                     .fontWeight(.semibold)
@@ -634,8 +637,7 @@ struct QuickActionsSection: View {
                         .font(.caption)
                         .frame(maxWidth: .infinity)
                     }
-                    .buttonStyle(.bordered)
-                    .controlSize(.small)
+                    .buttonStyle(.liquidGlass(isProminent: false, size: .small))
                     .disabled(calendarViewModel.isLoading)
                     
                     Button(action: {
@@ -656,8 +658,7 @@ struct QuickActionsSection: View {
                         .font(.caption)
                         .frame(maxWidth: .infinity)
                     }
-                    .buttonStyle(.bordered)
-                    .controlSize(.small)
+                    .buttonStyle(.liquidGlass(isProminent: false, size: .small))
                 }
                 
                 Button(action: {
@@ -670,8 +671,7 @@ struct QuickActionsSection: View {
                     .font(.caption)
                     .frame(maxWidth: .infinity)
                 }
-                .buttonStyle(.bordered)
-                .controlSize(.small)
+                .buttonStyle(.liquidGlass(isProminent: false, size: .small))
             }
         }
         .onChange(of: shouldOpenSettings) { _, newValue in

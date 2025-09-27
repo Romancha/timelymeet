@@ -43,7 +43,7 @@ struct CalendarSettingsView: View {
                                 await backgroundSync.performManualSync()
                             }
                         }
-                        .buttonStyle(.borderedProminent)
+                        .buttonStyle(.liquidGlass(isProminent: true, size: .regular))
                         .disabled(backgroundSync.syncStatus == .syncing)
                     }
                 }
@@ -86,8 +86,14 @@ struct CalendarSettingsView: View {
                                     .foregroundColor(.secondary)
                                     .padding(.horizontal, 8)
                                     .padding(.vertical, 4)
-                                    .background(Color.accentColor.opacity(0.1))
-                                    .cornerRadius(8)
+                                    .background(
+                                        Capsule()
+                                            .fill(.regularMaterial)
+                                            .overlay(
+                                                Capsule()
+                                                    .stroke(Color.accentColor.opacity(0.3), lineWidth: 0.5)
+                                            )
+                                    )
                             }
                         }
                         .padding(.vertical, 4)

@@ -66,7 +66,7 @@ struct MenuBarSettingsView: View {
                         VStack(alignment: .leading, spacing: 4) {
                             HStack {
                                 Circle()
-                                    .fill(Color.green)
+                                    .fill(.green)
                                     .frame(width: 6, height: 6)
                                 Text("example_1_hour".localized())
                                     .font(.caption)
@@ -75,7 +75,7 @@ struct MenuBarSettingsView: View {
                             
                             HStack {
                                 Circle()
-                                    .fill(Color.blue)
+                                    .fill(Color.accentColor)
                                     .frame(width: 6, height: 6)
                                 Text("example_8_hours".localized())
                                     .font(.caption)

@@ -376,25 +376,14 @@ struct ActionButton: View {
             HStack(spacing: 12) {
                 Image(systemName: icon)
                     .font(.system(size: 20, weight: .semibold))
-                
+
                 Text(title)
                     .font(.system(size: 18, weight: .semibold))
             }
             .foregroundColor(isPrimary ? .white : color)
-            .padding(.horizontal, 32)
-            .padding(.vertical, 16)
-            .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(isPrimary ? color : Color.clear)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(color, lineWidth: isPrimary ? 0 : 2)
-                    )
-            )
         }
-        .buttonStyle(.plain)
-        .scaleEffect(1.0)
-        .animation(.easeInOut(duration: 0.1), value: isPrimary)
+        .buttonStyle(.liquidGlass(isProminent: isPrimary, size: .large))
+        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: isPrimary)
     }
 }
 
@@ -458,12 +447,12 @@ struct CustomSnoozeView: View {
                 Button("cancel".localized()) {
                     dismiss()
                 }
-                .buttonStyle(.bordered)
+                .buttonStyle(.liquidGlass(isProminent: false))
                 
                 Button("apply_button".localized()) {
                     applyCustomSnooze()
                 }
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(.liquidGlass(isProminent: true))
                 .disabled(customMinutes.isEmpty || Int(customMinutes) == nil || Int(customMinutes) ?? 0 <= 0)
                 .keyboardShortcut(.return, modifiers: [])
             }
@@ -555,29 +544,14 @@ struct SnoozeMenuButton: View {
                     .opacity(0.7)
             }
             .foregroundStyle(.orange)
-            .padding(.horizontal, 32)
-            .padding(.vertical, 16)
         } primaryAction: {
             onSnooze(.threeMinutes)
         }
-        .buttonStyle(SnoozeButtonStyle())
+        .buttonStyle(.liquidGlass(isProminent: false, size: .large))
         .fixedSize()
     }
 }
 
-// Custom button style to match the other action buttons
-struct SnoozeButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .stroke(Color.orange, lineWidth: 2)
-                    .fill(Color.clear)
-            )
-            .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
-            .animation(.easeInOut(duration: 0.1), value: configuration.isPressed)
-    }
-}
 
 // MARK: - Color Extensions
 

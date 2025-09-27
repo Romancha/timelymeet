@@ -71,30 +71,32 @@ struct SettingsDetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 24) {
-                switch selectedTab {
-                case .notifications:
-                    NotificationSettingsView()
-//                case .themes:
-//                    ThemeSettingsView()
-                case .menuBar:
-                    MenuBarSettingsView()
-                        .environmentObject(appModel)
-                case .calendar:
-                    CalendarSettingsView()
-                case .videoConference:
-                    VideoConferenceSettingsView()
-                case .language:
-                    LanguageSettingsView()
-//                case .analytics:
-//                    AnalyticsView()
-                case .about:
-                    AboutView()
-                case .whatsNew:
-                    WhatsNewView()
-                case .developer:
-                    DeveloperSettingsView()
-                        .environmentObject(appModel.videoConferenceManager)
+            FloatingContainer {
+                VStack(alignment: .leading, spacing: 24) {
+                    switch selectedTab {
+                    case .notifications:
+                        NotificationSettingsView()
+//                    case .themes:
+//                        ThemeSettingsView()
+                    case .menuBar:
+                        MenuBarSettingsView()
+                            .environmentObject(appModel)
+                    case .calendar:
+                        CalendarSettingsView()
+                    case .videoConference:
+                        VideoConferenceSettingsView()
+                    case .language:
+                        LanguageSettingsView()
+//                    case .analytics:
+//                        AnalyticsView()
+                    case .about:
+                        AboutView()
+                    case .whatsNew:
+                        WhatsNewView()
+                    case .developer:
+                        DeveloperSettingsView()
+                            .environmentObject(appModel.videoConferenceManager)
+                    }
                 }
             }
             .padding(24)
