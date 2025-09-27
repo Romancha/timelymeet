@@ -31,10 +31,16 @@ struct MenuBarView: View {
             
             // Next meeting section
             NextMeetingSection()
-            
+
             Divider()
                 .padding(.vertical, 8)
-            
+
+            // Today's meetings section
+            TodayMeetingsSection()
+
+            Divider()
+                .padding(.vertical, 8)
+
             // Upcoming meetings list
             UpcomingMeetingsSection()
             
@@ -68,25 +74,39 @@ struct NextMeetingSection: View {
                 Spacer()
             }
             
-            if let nextEvent = calendarViewModel.upcomingEvents.first {
+            // Show current meeting first, then next upcoming meeting
+            let displayEvent = calendarViewModel.currentMeeting ?? calendarViewModel.upcomingEvents.first
+            if let nextEvent = displayEvent {
                 let isSkipped = calendarViewModel.isMeetingSkippedInViewModel(for: nextEvent)
-                
+                let meetingStatus = calendarViewModel.getMeetingStatus(for: nextEvent)
+                let isCurrent = meetingStatus == .current
+
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
                         Text(nextEvent.title ?? "untitled".localized())
                             .font(.subheadline)
-                            .fontWeight(.semibold)
+                            .fontWeight(isCurrent ? .bold : .semibold)
                             .strikethrough(isSkipped)
-                            .foregroundColor(isSkipped ? .primary : .secondary)
-                        
+                            .foregroundColor(
+                                isSkipped ? .primary :
+                                isCurrent ? .orange : .secondary
+                            )
+
+                        // Current meeting indicator
+                        if isCurrent {
+                            Image(systemName: "record.circle.fill")
+                                .font(.caption)
+                                .foregroundColor(.red)
+                        }
+
                         if isSkipped {
                             Image(systemName: "bell.slash")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                         }
-                        
+
                         Spacer()
-                        
+
                         // Skip/Unskip button
                         Button(action: {
                             if isSkipped {
@@ -101,18 +121,20 @@ struct NextMeetingSection: View {
                         }
                         .buttonStyle(.plain)
                         .help(isSkipped ? "enable_notifications_meeting".localized() : "skip_notifications_meeting".localized())
-                        
+
                         Circle()
                             .fill(Color(nextEvent.calendar.cgColor))
                             .frame(width: 8, height: 8)
                     }
-                    
+
                     HStack {
                         Text(timeUntilMeeting(nextEvent))
                             .font(.caption)
-                            .fontWeight(.medium)
-                            .foregroundColor(isSkipped ? .secondary : .primary)
                             .fontWeight(.semibold)
+                            .foregroundColor(
+                                isSkipped ? .secondary :
+                                isCurrent ? .orange : .primary
+                            )
                         Spacer()
                         Text(nextEvent.startDate, style: .time)
                             .font(.caption)
@@ -141,7 +163,7 @@ struct NextMeetingSection: View {
                 }
                 .padding(.vertical, 4)
                 .padding(.horizontal, 8)
-                .background(Color.blue.opacity(0.05))
+                .background(isCurrent ? Color.orange.opacity(0.1) : Color.blue.opacity(0.05))
                 .cornerRadius(8)
             } else {
                 Text("no_upcoming_meetings".localized())
@@ -153,23 +175,43 @@ struct NextMeetingSection: View {
     }
     
     private func timeUntilMeeting(_ event: EKEvent) -> String {
+        let meetingStatus = calendarViewModel.getMeetingStatus(for: event)
         let now = Date()
-        let timeInterval = event.startDate.timeIntervalSince(now)
-        
-        if timeInterval < 0 {
-            return "status_started".localized()
-        } else if timeInterval < 60 {
-            return "status_starting_now".localized()
-        } else if timeInterval < 3600 { // Less than 1 hour
-            let minutes = Int(timeInterval / 60)
-            return "in \(minutes)m"
-        } else if timeInterval < 86400 { // Less than 24 hours
-            let hours = Int(timeInterval / 3600)
-            let minutes = Int((timeInterval.truncatingRemainder(dividingBy: 3600)) / 60)
-            return "in \(hours)h \(minutes)m"
-        } else {
-            let days = Int(timeInterval / 86400)
-            return "in \(days)d"
+
+        switch meetingStatus {
+        case .current:
+            let endTimeInterval = event.endDate.timeIntervalSince(now)
+            if endTimeInterval < 60 {
+                return "status_ending_now".localized()
+            } else if endTimeInterval < 3600 {
+                let minutes = Int(endTimeInterval / 60)
+                return "\(minutes)m " + "remaining".localized()
+            } else {
+                let hours = Int(endTimeInterval / 3600)
+                let minutes = Int((endTimeInterval.truncatingRemainder(dividingBy: 3600)) / 60)
+                if minutes == 0 {
+                    return "\(hours)h " + "remaining".localized()
+                } else {
+                    return "\(hours)h \(minutes)m " + "remaining".localized()
+                }
+            }
+        case .upcoming:
+            let timeInterval = event.startDate.timeIntervalSince(now)
+            if timeInterval < 60 {
+                return "status_starting_now".localized()
+            } else if timeInterval < 3600 { // Less than 1 hour
+                let minutes = Int(timeInterval / 60)
+                return String(format: "in_minutes".localized(), minutes)
+            } else if timeInterval < 86400 { // Less than 24 hours
+                let hours = Int(timeInterval / 3600)
+                let minutes = Int((timeInterval.truncatingRemainder(dividingBy: 3600)) / 60)
+                return String(format: "in_hours_minutes".localized(), hours, minutes)
+            } else {
+                let days = Int(timeInterval / 86400)
+                return String(format: "in_days".localized(), days)
+            }
+        case .past:
+            return "status_ended".localized()
         }
     }
     
@@ -215,12 +257,52 @@ struct NextMeetingSection: View {
     }
 }
 
+struct TodayMeetingsSection: View {
+    @EnvironmentObject private var calendarViewModel: CalendarViewModel
+
+    private let maxDisplayEvents = 6
+
+    var body: some View {
+        let todayEvents = Array(calendarViewModel.todayEvents.prefix(maxDisplayEvents))
+
+        if !todayEvents.isEmpty {
+            VStack(alignment: .leading, spacing: 8) {
+                HStack {
+                    Image(systemName: "calendar.circle")
+                        .foregroundColor(.primary)
+                    Text("today_section".localized())
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                    Spacer()
+                    Text("\(todayEvents.count)")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+
+                ForEach(Array(todayEvents.prefix(maxDisplayEvents)), id: \.uniqueID) { event in
+                    MenuBarEventRow(event: event, showDate: false)
+                }
+
+                if todayEvents.count > maxDisplayEvents {
+                    Text(String(format: "more_count".localized(), todayEvents.count - maxDisplayEvents))
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .padding(.top, 4)
+                }
+            }
+        }
+    }
+}
+
 struct UpcomingMeetingsSection: View {
     @EnvironmentObject private var calendarViewModel: CalendarViewModel
     
     private let maxDisplayEvents = 8
     
     var body: some View {
+        // Use only non-today events for upcoming section
+        let upcomingEventsOnly = calendarViewModel.upcomingEvents
+
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Image(systemName: "calendar")
@@ -229,18 +311,17 @@ struct UpcomingMeetingsSection: View {
                     .font(.headline)
                     .fontWeight(.semibold)
                 Spacer()
-                Text("\(calendarViewModel.upcomingEvents.count)")
+                Text("\(upcomingEventsOnly.count)")
                     .font(.caption)
                     .foregroundColor(.secondary)
             }
-            
-            if calendarViewModel.upcomingEvents.isEmpty {
+            if upcomingEventsOnly.isEmpty {
                 Text("no_meetings_found".localized())
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .padding(.vertical, 8)
             } else {
-                let groupedEvents = groupEventsByDay(calendarViewModel.upcomingEvents, maxEvents: maxDisplayEvents)
+                let groupedEvents = groupEventsByDay(upcomingEventsOnly, maxEvents: maxDisplayEvents)
                 
                 ForEach(groupedEvents, id: \.title) { group in
                     VStack(alignment: .leading, spacing: 4) {
@@ -272,8 +353,8 @@ struct UpcomingMeetingsSection: View {
                 }
                 
                 let totalShown = groupedEvents.reduce(0) { $0 + $1.events.count }
-                if calendarViewModel.upcomingEvents.count > totalShown {
-                    Text("+ \(calendarViewModel.upcomingEvents.count - totalShown) more")
+                if upcomingEventsOnly.count > totalShown {
+                    Text(String(format: "more_count".localized(), upcomingEventsOnly.count - totalShown))
                         .font(.caption)
                         .foregroundColor(.secondary)
                         .padding(.top, 4)
@@ -287,60 +368,44 @@ struct UpcomingMeetingsSection: View {
         let now = Date()
         let today = calendar.startOfDay(for: now)
         let tomorrow = calendar.date(byAdding: .day, value: 1, to: today)!
-        
+
         var groups: [EventGroup] = []
         var eventCount = 0
-        
-        // Today's events
-        let todayEvents = events.filter { event in
-            calendar.isDate(event.startDate, inSameDayAs: today) && eventCount < maxEvents
+
+        // Tomorrow's events (only upcoming)
+        let tomorrowEvents = events.filter { event in
+            calendar.isDate(event.startDate, inSameDayAs: tomorrow) &&
+            event.startDate > now
         }.prefix(maxEvents - eventCount)
-        
-        if !todayEvents.isEmpty {
+
+        if !tomorrowEvents.isEmpty {
             groups.append(EventGroup(
-                title: "Today",
-                color: .primary,
-                events: Array(todayEvents),
+                title: "tomorrow_section".localized(),
+                color: .secondary,
+                events: Array(tomorrowEvents),
                 showDate: false
             ))
-            eventCount += todayEvents.count
+            eventCount += tomorrowEvents.count
         }
-        
-        // Tomorrow's events
-        if eventCount < maxEvents {
-            let tomorrowEvents = events.filter { event in
-                calendar.isDate(event.startDate, inSameDayAs: tomorrow) && eventCount < maxEvents
-            }.prefix(maxEvents - eventCount)
-            
-            if !tomorrowEvents.isEmpty {
-                groups.append(EventGroup(
-                    title: "Tomorrow",
-                    color: .secondary,
-                    events: Array(tomorrowEvents),
-                    showDate: false
-                ))
-                eventCount += tomorrowEvents.count
-            }
-        }
-        
-        // Other events (future days)
+
+        // Other events (future days only)
         if eventCount < maxEvents {
             let otherEvents = events.filter { event in
                 !calendar.isDate(event.startDate, inSameDayAs: today) &&
                 !calendar.isDate(event.startDate, inSameDayAs: tomorrow) &&
                 event.startDate > tomorrow
             }.prefix(maxEvents - eventCount)
-            
+
             if !otherEvents.isEmpty {
                 groups.append(EventGroup(
-                    title: "Later",
+                    title: "later_section".localized(),
                     color: .secondary,
                     events: Array(otherEvents),
                     showDate: true
                 ))
             }
         }
-        
+
         return groups
     }
 }
@@ -375,13 +440,15 @@ struct MenuBarEventRow: View {
     
     var body: some View {
         let isSkipped = calendarViewModel.isMeetingSkippedInViewModel(for: event)
-        
+        let meetingStatus = calendarViewModel.getMeetingStatus(for: event)
+
         HStack(spacing: 8) {
             VStack(alignment: .leading, spacing: 2) {
                 Text(event.startDate, style: .time)
                     .font(.caption)
                     .fontWeight(.medium)
-                
+                    .foregroundColor(meetingStatus == .past ? .secondary : .primary)
+
                 if showDate {
                     Text(Self.dayMonthFormatter.string(from: event.startDate))
                         .font(.caption2)
@@ -389,23 +456,41 @@ struct MenuBarEventRow: View {
                 }
             }
             .frame(width: 50, alignment: .leading)
-            
+
             VStack(alignment: .leading, spacing: 2) {
                 HStack {
                     Text(event.title ?? "untitled".localized())
                         .font(.caption)
-                        .fontWeight(.medium)
+                        .fontWeight(meetingStatus == .current ? .semibold : .medium)
                         .lineLimit(1)
-                        .strikethrough(isSkipped)
-                        .foregroundColor(isSkipped ? .secondary : .primary)
-                    
+                        .strikethrough(isSkipped || meetingStatus == .past)
+                        .foregroundColor(
+                            isSkipped ? .secondary :
+                            meetingStatus == .current ? .orange :
+                            meetingStatus == .past ? .secondary : .primary
+                        )
+
+                    // Meeting status indicator
+                    switch meetingStatus {
+                    case .current:
+                        Image(systemName: "record.circle.fill")
+                            .font(.caption2)
+                            .foregroundColor(.red)
+                    case .past:
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
+                    case .upcoming:
+                        EmptyView()
+                    }
+
                     if isSkipped {
                         Image(systemName: "bell.slash")
                             .font(.caption2)
                             .foregroundColor(.secondary)
                     }
                 }
-                
+
                 if let videoInfo = calendarViewModel.getVideoConferenceInfo(for: event) {
                     HStack(spacing: 4) {
                         Image(systemName: videoInfo.platform.iconName)
@@ -413,12 +498,23 @@ struct MenuBarEventRow: View {
                     }
                     .fontWeight(.light)
                     .font(.caption2)
-                    .foregroundColor(isSkipped ? .secondary : .primary)
+                    .foregroundColor(
+                        isSkipped || meetingStatus == .past ? .secondary :
+                        meetingStatus == .current ? .orange : .primary
+                    )
+                }
+
+                // Status text for current/past meetings
+                if meetingStatus != .upcoming {
+                    Text(meetingStatus == .current ? "status_ongoing".localized() : "status_ended".localized())
+                        .font(.caption2)
+                        .fontWeight(.medium)
+                        .foregroundColor(meetingStatus == .current ? .orange : .secondary)
                 }
             }
-            
+
             Spacer()
-            
+
             // Skip/Unskip button
             Button(action: {
                 if isSkipped {
@@ -433,13 +529,16 @@ struct MenuBarEventRow: View {
             }
             .buttonStyle(.plain)
             .help(isSkipped ? "enable_notifications_meeting".localized() : "skip_notifications_meeting".localized())
-            
+
             Circle()
                 .fill(Color(event.calendar.cgColor))
                 .frame(width: 6, height: 6)
+                .opacity(meetingStatus == .past ? 0.5 : 1.0)
         }
         .padding(.vertical, 2)
         .padding(.horizontal, 4)
+        .background(meetingStatus == .current ? Color.orange.opacity(0.1) : Color.clear)
+        .cornerRadius(4)
         .contentShape(Rectangle())
         .onTapGesture {
             if !isSkipped, let videoInfo = calendarViewModel.getVideoConferenceInfo(for: event) {

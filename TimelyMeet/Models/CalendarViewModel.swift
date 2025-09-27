@@ -131,6 +131,35 @@ class CalendarViewModel: ObservableObject {
             event.startDate > now
         }.sorted { $0.startDate < $1.startDate }
     }
+
+    var currentMeeting: EKEvent? {
+        let now = Date()
+        return events.first { event in
+            event.startDate <= now && event.endDate > now
+        }
+    }
+
+    var todayEvents: [EKEvent] {
+        let calendar = Calendar.current
+        let now = Date()
+        let today = calendar.startOfDay(for: now)
+
+        let filtered = events.filter { event in
+            calendar.isDate(event.startDate, inSameDayAs: today)
+        }.sorted { $0.startDate < $1.startDate }
+        return filtered
+    }
+
+    func getMeetingStatus(for event: EKEvent) -> MeetingStatus {
+        let now = Date()
+        if event.startDate > now {
+            return .upcoming
+        } else if event.startDate <= now && event.endDate > now {
+            return .current
+        } else {
+            return .past
+        }
+    }
     
     func checkAuthorizationStatus() {
         authorizationStatus = EKEventStore.authorizationStatus(for: .event)
@@ -209,9 +238,11 @@ class CalendarViewModel: ObservableObject {
                 }
             }
             
-            // Load events for the next 30 days with optimized filtering
-            let startDate = Date()
-            let endDate = Calendar.current.date(byAdding: .day, value: 30, to: startDate)!
+            // Load events from start of today to 30 days ahead
+            let calendar = Calendar.current
+            let today = calendar.startOfDay(for: Date())
+            let startDate = today
+            let endDate = calendar.date(byAdding: .day, value: 30, to: startDate)!
             
             // Use only selected calendars
             let calendarsToUse = loadedCalendars.filter { selectedCalendarIds.contains($0.calendarIdentifier) }
@@ -224,27 +255,11 @@ class CalendarViewModel: ObservableObject {
             )
             
             // Optimize event filtering by doing it in batches to avoid blocking the main thread
-            let allEvents = eventStore.events(matching: predicate)
+            let allEvents = eventStore.events(matching: predicate).sorted { $0.startDate < $1.startDate }
             logger.debug("Found \(allEvents.count) raw events")
             
-            // Process events in background and only update UI on main thread
-            let filteredEvents = allEvents.compactMap { event -> EKEvent? in
-                // More efficient filtering logic
-                let hasNotes = !(event.notes?.isEmpty ?? true)
-                let hasMultipleAttendees = (event.attendees?.count ?? 0) > 1
-                let titleContainsMeeting = event.title?.lowercased().contains("meeting") == true ||
-                                         event.title?.lowercased().contains("call") == true
-                let videoConferenceManager = VideoConferenceManager()
-                let hasVideoURL = videoConferenceManager.extractVideoConferenceInfo(from: event) != nil
-                
-                return (hasNotes || hasMultipleAttendees || titleContainsMeeting || hasVideoURL) ? event : nil
-            }
-            .sorted { $0.startDate < $1.startDate }
-            
-            logger.info("Filtered to \(filteredEvents.count) meeting events")
-            
             await MainActor.run {
-                events = filteredEvents
+                events = allEvents
                 isLoading = false
                 errorMessage = nil // Clear any previous errors on success
                 
@@ -253,8 +268,8 @@ class CalendarViewModel: ObservableObject {
                 
                 // Schedule notifications for loaded events
                 if let scheduler = notificationScheduler {
-                    logger.info("Scheduling notifications for \(filteredEvents.count) events")
-                    let _ = scheduler.scheduleNotifications(for: filteredEvents)
+                    logger.info("Scheduling notifications for \(allEvents.count) events")
+                    let _ = scheduler.scheduleNotifications(for: allEvents)
                 } else {
                     logger.warning("notificationScheduler is nil, cannot schedule notifications")
                 }
@@ -432,7 +447,12 @@ enum VideoConferencePlatform: String, CaseIterable, Codable {
     }
 }
 
-// MARK: - Debug Extensions
+enum MeetingStatus {
+    case upcoming
+    case current
+    case past
+}
+
 extension EKAuthorizationStatus {
     var debugDescription: String {
         switch self {

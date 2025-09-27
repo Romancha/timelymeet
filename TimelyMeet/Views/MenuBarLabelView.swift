@@ -102,7 +102,7 @@ struct MenuBarLabelView: View {
         let timeInterval = date.timeIntervalSince(now)
         
         if timeInterval < 0 {
-            return "Started"
+            return "status_started".localized()
         } else if timeInterval < 60 {
             return "Now"
         } else if timeInterval < 3600 { // Less than 1 hour
