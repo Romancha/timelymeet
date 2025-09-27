@@ -1,6 +1,40 @@
 {
   "releaseNotes": [
     {
+      "version": "1.4",
+      "date": "2025-09-27",
+      "changes": [
+        {
+          "type": "feature",
+          "description": {
+            "en": "Real-time current time updates in menu bar for accurate meeting timing",
+            "ru": "Обновление текущего времени в меню в реальном времени для точного отслеживания встреч"
+          }
+        },
+        {
+          "type": "improvement",
+          "description": {
+            "en": "Modern Apple-style UI design",
+            "ru": "Современный дизайн в стиле Apple"
+          }
+        },
+        {
+          "type": "bugfix",
+          "description": {
+            "en": "Fixed menu bar not showing current meeting information when no upcoming meetings",
+            "ru": "Исправлено отображение информации о текущей встрече в меню когда нет предстоящих встреч"
+          }
+        },
+        {
+          "type": "bugfix",
+          "description": {
+            "en": "Fixed App Store review link in application settings",
+            "ru": "Исправлена ссылка на отзыв в App Store в настройках приложения"
+          }
+        }
+      ]
+    },
+    {
       "version": "1.3",
       "date": "2025-09-10",
       "changes": [
