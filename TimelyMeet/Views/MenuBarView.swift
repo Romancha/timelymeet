@@ -92,7 +92,7 @@ struct NextMeetingSection: View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
                 Image(systemName: "clock.fill")
-                    .foregroundColor(.accentColor)
+                    .foregroundColor(.primary)
                     .symbolRenderingMode(.hierarchical)
                 Text("next_meeting".localized())
                     .font(.headline)
@@ -123,7 +123,6 @@ struct NextMeetingSection: View {
                             Image(systemName: "circle.inset.filled")
                                 .font(.caption)
                                 .foregroundColor(.accentColor)
-                                .symbolEffect(.pulse.wholeSymbol, options: .repeating)
                         }
 
                         if isSkipped {
@@ -302,7 +301,7 @@ struct TodayMeetingsSection: View {
             VStack(alignment: .leading, spacing: 6) {
                 HStack {
                     Image(systemName: "calendar.circle")
-                        .foregroundColor(.blue)
+                        .foregroundColor(.primary)
                         .symbolRenderingMode(.hierarchical)
                     Text("today_section".localized())
                         .font(.headline)
@@ -341,7 +340,7 @@ struct UpcomingMeetingsSection: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Image(systemName: "calendar")
-                    .foregroundColor(.green)
+                    .foregroundColor(.primary)
                     .symbolRenderingMode(.hierarchical)
                 Text("upcoming".localized())
                     .font(.headline)
@@ -514,7 +513,6 @@ struct MenuBarEventRow: View {
                         Image(systemName: "circle.inset.filled")
                             .font(.caption2)
                             .foregroundColor(.accentColor)
-                            .symbolEffect(.pulse.wholeSymbol, options: .repeating)
                     case .past:
                         Image(systemName: "checkmark.circle")
                             .font(.caption2)

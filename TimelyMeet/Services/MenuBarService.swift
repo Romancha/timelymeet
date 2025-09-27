@@ -19,14 +19,20 @@ class MenuBarService: ObservableObject {
     // Computed property that automatically reacts to changes
     var shouldShowMeetingInfo: Bool {
         guard let calendarViewModel = calendarViewModel else { return false }
-        
+
         let now = Date()
         let thresholdDate = now.addingTimeInterval(appSettings.menuBarDisplayThreshold * 3600)
-        
+
+        // Check for current meeting
+        if calendarViewModel.currentMeeting != nil {
+            return true
+        }
+
+        // Check for upcoming meetings within threshold
         let upcomingEvents = calendarViewModel.events.filter { event in
             event.startDate > now && event.startDate <= thresholdDate
         }
-        
+
         return !upcomingEvents.isEmpty
     }
     
