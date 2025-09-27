@@ -92,7 +92,7 @@ struct WhatsNewView: View {
                         .buttonStyle(.borderedProminent)
                         
                         Button("rate_app_store".localized()) {
-                            if let url = URL(string: "macappstore://apps.apple.com/app/id6543210987?action=write-review") {
+                            if let url = URL(string: "https://apps.apple.com/ru/app/timelymeet/id6751949087") {
                                 NSWorkspace.shared.open(url)
                             }
                         }
