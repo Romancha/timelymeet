@@ -313,7 +313,7 @@ struct TodayMeetingsSection: View {
                 }
 
                 ForEach(Array(todayEvents.prefix(maxDisplayEvents)), id: \.uniqueID) { event in
-                    MenuBarEventRow(event: event, showDate: false, currentTime: currentTime)
+                    MenuBarEventRow(event: event, showDate: false, showEndTime: true, currentTime: currentTime)
                 }
 
                 if todayEvents.count > maxDisplayEvents {
@@ -455,23 +455,25 @@ struct EventGroup {
 struct MenuBarEventRow: View {
     let event: EKEvent
     let showDate: Bool
+    let showEndTime: Bool
     let currentTime: Date
     @EnvironmentObject private var calendarViewModel: CalendarViewModel
     @EnvironmentObject private var notificationScheduler: NotificationScheduler
     @Environment(\.managedObjectContext) private var managedObjectContext
 
     private let logger = Logger(subsystem: "org.romancha.timelymeet", category: "MenuBarEventRow")
-    
-    
+
+
     private static let dayMonthFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMM"
         return formatter
     }()
-    
-    init(event: EKEvent, showDate: Bool = true, currentTime: Date = Date()) {
+
+    init(event: EKEvent, showDate: Bool = true, showEndTime: Bool = false, currentTime: Date = Date()) {
         self.event = event
         self.showDate = showDate
+        self.showEndTime = showEndTime
         self.currentTime = currentTime
     }
     
@@ -485,6 +487,12 @@ struct MenuBarEventRow: View {
                     .font(.caption)
                     .fontWeight(.medium)
                     .foregroundColor(meetingStatus == .past ? .secondary : .primary)
+
+                if showEndTime {
+                    Text(event.endDate, style: .time)
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                }
 
                 if showDate {
                     Text(Self.dayMonthFormatter.string(from: event.startDate))
