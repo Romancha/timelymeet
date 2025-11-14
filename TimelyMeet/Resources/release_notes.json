@@ -1,6 +1,40 @@
 {
   "releaseNotes": [
     {
+      "version": "1.5",
+      "date": "2025-11-14",
+      "changes": [
+        {
+          "type": "feature",
+          "description": {
+            "en": "Automatic app launch on system startup configuration",
+            "ru": "Настройка автоматического запуска приложения при старте системы"
+          }
+        },
+        {
+          "type": "improvement",
+          "description": {
+            "en": "Improved handling of overlapping meetings in status bar",
+            "ru": "Улучшенная обработка пересекающихся встреч в статус баре"
+          }
+        },
+        {
+          "type": "improvement",
+          "description": {
+            "en": "Enhanced meeting time display in Today section",
+            "ru": "Улучшенное отображение времени встреч в разделе Сегодня"
+          }
+        },
+        {
+          "type": "bugfix",
+          "description": {
+            "en": "Fixed muted meetings appearing in the status bar",
+            "ru": "Исправлено отображение отключенных встреч в статус баре"
+          }
+        }
+      ]
+    },
+    {
       "version": "1.4",
       "date": "2025-09-27",
       "changes": [
