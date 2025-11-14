@@ -100,10 +100,10 @@ class MenuBarService: ObservableObject {
         let now = Date()
         let thresholdDate = now.addingTimeInterval(appSettings.menuBarDisplayThreshold * 3600) // Convert hours to seconds
 
-        // First check if there's a current meeting
-        if let currentMeeting = calendarViewModel.currentMeeting {
-            nextMeetingEvent = currentMeeting
-            timeToNextMeeting = formatMenuBarText(for: currentMeeting)
+        // Use smart meeting prioritization that considers both current and imminent upcoming meetings
+        if let relevantMeeting = calendarViewModel.getMostRelevantMeeting(upcomingThresholdMinutes: 10) {
+            nextMeetingEvent = relevantMeeting
+            timeToNextMeeting = formatMenuBarText(for: relevantMeeting)
         } else {
             // Check for upcoming meetings
             let allEvents = calendarViewModel.events

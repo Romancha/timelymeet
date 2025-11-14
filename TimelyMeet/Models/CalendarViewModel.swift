@@ -132,11 +132,86 @@ class CalendarViewModel: ObservableObject {
         }.sorted { $0.startDate < $1.startDate }
     }
 
-    var currentMeeting: EKEvent? {
+    var currentMeetings: [EKEvent] {
         let now = Date()
-        return events.first { event in
+        return events.filter { event in
             event.startDate <= now && event.endDate > now
         }
+    }
+
+    /// Returns the most relevant current meeting using smart prioritization
+    /// When multiple meetings overlap, prioritizes:
+    /// 1. Non all-day events over all-day events
+    /// 2. Shorter duration meetings (more focused commitments)
+    /// 3. Most recently started meetings (for equal durations)
+    var currentMeeting: EKEvent? {
+        let currentMeetings = self.currentMeetings
+
+        guard !currentMeetings.isEmpty else { return nil }
+
+        if currentMeetings.count == 1 {
+            return currentMeetings.first
+        }
+
+        let nonAllDayMeetings = currentMeetings.filter { !$0.isAllDay }
+        let meetingsToSort = nonAllDayMeetings.isEmpty ? currentMeetings : nonAllDayMeetings
+
+        // Sort by duration (shortest first), then by start date (most recent first)
+        return meetingsToSort.sorted { meeting1, meeting2 in
+            let duration1 = calculateDuration(for: meeting1)
+            let duration2 = calculateDuration(for: meeting2)
+
+            if duration1 != duration2 {
+                return duration1 < duration2 // Shorter meetings first
+            } else {
+                return meeting1.startDate > meeting2.startDate // More recent first
+            }
+        }.first
+    }
+
+    private func calculateDuration(for event: EKEvent) -> TimeInterval {
+        return event.endDate.timeIntervalSince(event.startDate)
+    }
+
+    /// Returns the most relevant meeting considering both current and imminent upcoming meetings
+    /// Prioritizes upcoming meetings that start soon over long-running current meetings
+    /// - Parameter upcomingThresholdMinutes: Minutes ahead to consider an upcoming meeting as imminent (default: 10)
+    /// - Returns: The most relevant meeting to display, or nil if no relevant meetings
+    func getMostRelevantMeeting(upcomingThresholdMinutes: Double = 10) -> EKEvent? {
+        let now = Date()
+        let upcomingThreshold = now.addingTimeInterval(upcomingThresholdMinutes * 60)
+
+        let currentMeetings = self.currentMeetings
+
+        // Get upcoming meetings that start within the threshold
+        let imminentUpcomingMeetings = events.filter { event in
+            event.startDate > now && event.startDate <= upcomingThreshold
+        }.sorted { $0.startDate < $1.startDate }
+
+        // If there's an imminent upcoming meeting, prioritize it over current meetings
+        if let nextMeeting = imminentUpcomingMeetings.first {
+            // If we have current meetings, compare to decide which is more relevant
+            if !currentMeetings.isEmpty {
+                let nonAllDayCurrentMeetings = currentMeetings.filter { !$0.isAllDay }
+                let currentToConsider = nonAllDayCurrentMeetings.isEmpty ? currentMeetings : nonAllDayCurrentMeetings
+
+                if let currentMeeting = currentToConsider.first {
+                    let currentDuration = calculateDuration(for: currentMeeting)
+                    let timeUntilNext = nextMeeting.startDate.timeIntervalSince(now)
+
+                    // Prioritize upcoming if:
+                    // 1. It starts within threshold AND
+                    // 2. Current meeting is longer than or equal to 30 minutes (1800 seconds)
+                    if timeUntilNext <= (upcomingThresholdMinutes * 60) && currentDuration >= 1800 {
+                        return nextMeeting
+                    }
+                }
+            } else {
+                return nextMeeting
+            }
+        }
+
+        return currentMeeting
     }
 
     var todayEvents: [EKEvent] {
