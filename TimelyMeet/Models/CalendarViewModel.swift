@@ -128,14 +128,14 @@ class CalendarViewModel: ObservableObject {
     var upcomingEvents: [EKEvent] {
         let now = Date()
         return events.filter { event in
-            event.startDate > now
+            event.startDate > now && !isMeetingSkippedInViewModel(for: event)
         }.sorted { $0.startDate < $1.startDate }
     }
 
     var currentMeetings: [EKEvent] {
         let now = Date()
         return events.filter { event in
-            event.startDate <= now && event.endDate > now
+            event.startDate <= now && event.endDate > now && !isMeetingSkippedInViewModel(for: event)
         }
     }
 
@@ -185,7 +185,7 @@ class CalendarViewModel: ObservableObject {
 
         // Get upcoming meetings that start within the threshold
         let imminentUpcomingMeetings = events.filter { event in
-            event.startDate > now && event.startDate <= upcomingThreshold
+            event.startDate > now && event.startDate <= upcomingThreshold && !isMeetingSkippedInViewModel(for: event)
         }.sorted { $0.startDate < $1.startDate }
 
         // If there's an imminent upcoming meeting, prioritize it over current meetings

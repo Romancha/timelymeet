@@ -71,11 +71,18 @@ class MenuBarService: ObservableObject {
     
     func setCalendarViewModel(_ viewModel: CalendarViewModel) {
         self.calendarViewModel = viewModel
-        
+
         updateMenuBarTitle()
-        
+
         // Listen for changes in the events array specifically
         viewModel.$events.sink { [weak self] events in
+            DispatchQueue.main.async {
+                self?.updateMenuBarTitle()
+            }
+        }.store(in: &cancellables)
+
+        // Listen for changes in skipped meetings to update menu bar immediately
+        viewModel.$skippedMeetingIds.sink { [weak self] _ in
             DispatchQueue.main.async {
                 self?.updateMenuBarTitle()
             }
