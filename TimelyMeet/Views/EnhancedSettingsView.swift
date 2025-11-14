@@ -23,7 +23,7 @@ struct EnhancedSettingsView: View {
     let initialTab: SettingsTab
     @State private var selectedTab: SettingsTab
 
-    init(initialTab: SettingsTab = .notifications) {
+    init(initialTab: SettingsTab = .general) {
         self.initialTab = initialTab
         self._selectedTab = State(initialValue: initialTab)
     }
@@ -80,6 +80,8 @@ struct SettingsDetailView: View {
             FloatingContainer {
                 VStack(alignment: .leading, spacing: 24) {
                     switch selectedTab {
+                    case .general:
+                        GeneralSettingsView()
                     case .notifications:
                         NotificationSettingsView()
 //                    case .themes:
@@ -113,6 +115,7 @@ struct SettingsDetailView: View {
 // MARK: - Individual Settings Views
 
 enum SettingsTab: String, CaseIterable {
+    case general = "general"
     case notifications = "notifications"
     //case themes = "themes"
     case menuBar = "menuBar"
@@ -123,9 +126,10 @@ enum SettingsTab: String, CaseIterable {
     case about = "about"
     case whatsNew = "whatsNew"
     case developer = "developer"
-    
+
     var title: String {
         switch self {
+        case .general: return "settings_general".localized()
         case .notifications: return "settings_notifications".localized()
                     //case .themes: return "settings_themes".localized()
         case .menuBar: return "settings_menubar".localized()
@@ -138,9 +142,10 @@ enum SettingsTab: String, CaseIterable {
         case .developer: return "settings_developer".localized()
         }
     }
-    
+
     var iconName: String {
         switch self {
+        case .general: return "gearshape"
         case .notifications: return "bell"
         //case .themes: return "paintbrush"
         case .menuBar: return "menubar.rectangle"

@@ -3759,6 +3759,125 @@
         }
       }
     },
+    "settings_general" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Общие"
+          }
+        }
+      }
+    },
+    "general_settings_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configure basic application settings and startup behavior"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройте основные параметры приложения и поведение при запуске"
+          }
+        }
+      }
+    },
+    "startup_behavior" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Startup Behavior"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поведение при запуске"
+          }
+        }
+      }
+    },
+    "launch_at_login" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Launch at Login"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запускать при входе"
+          }
+        }
+      }
+    },
+    "launch_at_login_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatically launch TimelyMeet when you log in to your Mac"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Автоматически запускать TimelyMeet при входе в систему"
+          }
+        }
+      }
+    },
+    "approval_required" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Approval Required"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Требуется одобрение"
+          }
+        }
+      }
+    },
+    "approval_required_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please approve TimelyMeet in System Settings → General → Login Items"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пожалуйста, одобрите TimelyMeet в Системных настройках → Основные → Объекты входа"
+          }
+        }
+      }
+    },
     "settings_notifications" : {
       "comment" : "Settings Categories",
       "extractionState" : "manual",
