@@ -319,7 +319,8 @@ struct TodayMeetingsSection: View {
                             }
                         }
                     }
-                    .frame(height: 200)
+                    .frame(maxHeight: 200)
+                    .fixedSize(horizontal: false, vertical: true)
                     .scrollIndicators(.automatic)
                     .scrollIndicatorsFlash(onAppear: true)
                     .onAppear {
@@ -396,7 +397,8 @@ struct UpcomingMeetingsSection: View {
                         }
                     }
                 }
-                .frame(height: 220)
+                .frame(maxHeight: 230)
+                .fixedSize(horizontal: false, vertical: true)
                 .scrollIndicators(.visible)
             }
         }
