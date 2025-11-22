@@ -5,41 +5,70 @@
 <!-- App Icon -->
 <img src="TimelyMeet/Assets.xcassets/AppIcon.appiconset/AppIcon-128.png" alt="TimelyMeet Icon" width="128" height="128">
 
-**Meeting Notifications for macOS**
-
-Stay timely. Never miss a meet.
+### Stay timely. Never miss a meet.
+#### Meeting Notifications for macOS
 
 <!-- App Store Badge -->
 [![Download on the App Store](https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg)](https://apps.apple.com/app/timelymeet/id6751949087)
 
+![GitHub release (with filter)](https://img.shields.io/github/v/release/romancha/TimelyMeet)
+![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/romancha/TimelyMeet)
 ![macOS](https://img.shields.io/badge/macOS-15.0+-blue?logo=apple)
-![Swift](https://img.shields.io/badge/Swift-5.0+-orange?logo=swift)
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-Framework-blue)
-![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]
+![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
+[![GitHub stars](https://img.shields.io/github/stars/romancha/TimelyMeet?style=social)](https://github.com/romancha/TimelyMeet/stargazers)
 
-<div align="center">
-<img src="docs/screenshot-main.png" alt="TimelyMeet Main Interface">
+[Features](#-features) • [Installation](#-getting-started) • [Contributing](#-contributing)
+
+---
+
 </div>
 
+## 🎯 Why TimelyMeet?
+
+**Ever been late to an important meeting because you didn't notice the notification?**
+
+TimelyMeet was born from personal frustration with missing Zoom calls and being "that person" who joins 5 minutes late. It sits in your macOS menu bar and fire full screen alert with one-click meeting join, so you never miss another important call.
+
+<div align="center">
+<img src="docs/screenshot-main.png" alt="TimelyMeet Main Interface" width="800">
 </div>
 
 ## ✨ Features
 
-🚨 **Fullscreen Alerts** - Beautiful fullscreen notifications that grab your attention
+### Core Functionality
 
-⚡ **Fast join to conference** - One-click joining of video conferences with smart URL detection
+🚨 **Fullscreen Alerts**
+Beautiful, attention-grabbing fullscreen notifications ensure you never miss an important meeting.
 
-🔔 **Adjustable notifications** - Customizable reminder times and notification sounds for your meetings
+⚡ **One-Click Join**
+Instantly join Zoom, Google Meet, Microsoft Teams, and other video conferences with smart URL detection.
 
-📊 **Meeting info in menu bar** - Always accessible from your menu bar with quick meeting overview
+📊 **Menu Bar Integration**
+Your upcoming meetings are always visible in the menu bar with countdown timers and quick access.
 
-⌨️ **Keyboard Shortcuts** - ESC to dismiss, Enter to join meetings, S to snooze (3min). Hold snooze button for custom
-time options
+### Customization
 
-💎 **Completely Free** - No subscriptions, no hidden fees - all features are free
+🔔 **Smart Notifications**
+Configure custom reminder times, notification sounds, and alert preferences for different meeting types.
 
-🔒 **Complete Privacy: We do not collect or store any user data** - Your calendar data stays private and secure on your
-device
+⌨️ **Keyboard Shortcuts**
+- `ESC` to dismiss
+- `Enter` to join meeting
+- `S` to snooze (3 minutes)
+- Hold snooze button for custom time options
+
+### Privacy & Cost
+
+💎 **Completely Free**
+No subscriptions, no hidden fees, no premium tiers - all features are free forever.
+
+🔒 **Privacy First**
+Your calendar data never leaves your device. No tracking, no analytics, no data collection. Period.
+
+## 🌐 Website
+
+**🔗 [timelymeet.romancha.org](https://timelymeet.romancha.org)**
 
 ## 🚀 Getting Started
 
@@ -137,10 +166,32 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
-## 📞 Support
+## 📞 Support & Community
 
-- 🐛 Issues: [GitHub Issues](https://github.com/romancha/TimelyMeet/issues)
+### Need Help?
 
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/romancha/TimelyMeet/issues)
+- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/romancha/TimelyMeet/discussions)
+- 🌐 **Website**: [timelymeet.romancha.org](https://timelymeet.romancha.org)
+
+### Love TimelyMeet?
+
+If TimelyMeet helps you stay on time, consider:
+
+- ⭐ **Star this repository** to help others discover it
+- 🐦 **Share on Twitter/X** with `#TimelyMeet`
+- 📝 **Write a review** on the App Store
+- 🤝 **Contribute** code, documentation, or translations
 
 ---
+
+<div align="center">
+
+**Made by [Roman Makarskiy](https://romancha.org)**
+
+Built with SwiftUI • Open Source • Privacy First
+
+[Website](https://timelymeet.romancha.org) • [App Store](https://apps.apple.com/app/timelymeet/id6751949087) • [GitHub](https://github.com/romancha/TimelyMeet)
+
+</div>
 
