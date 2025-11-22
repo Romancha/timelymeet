@@ -176,12 +176,13 @@ class CalendarViewModel: ObservableObject {
     /// Returns the most relevant meeting considering both current and imminent upcoming meetings
     /// Prioritizes upcoming meetings that start soon over long-running current meetings
     /// - Parameter upcomingThresholdMinutes: Minutes ahead to consider an upcoming meeting as imminent (default: 10)
-    /// - Returns: The most relevant meeting to display, or nil if no relevant meetings
+    /// - Returns: The most relevant meeting to display, or nil if no meetings exist
     func getMostRelevantMeeting(upcomingThresholdMinutes: Double = 10) -> EKEvent? {
         let now = Date()
         let upcomingThreshold = now.addingTimeInterval(upcomingThresholdMinutes * 60)
 
         let currentMeetings = self.currentMeetings
+        let nextUpcomingMeeting = upcomingEvents.first
 
         // Get upcoming meetings that start within the threshold
         let imminentUpcomingMeetings = events.filter { event in
@@ -211,7 +212,11 @@ class CalendarViewModel: ObservableObject {
             }
         }
 
-        return currentMeeting
+        if let activeMeeting = currentMeeting {
+            return activeMeeting
+        }
+
+        return nextUpcomingMeeting
     }
 
     var todayEvents: [EKEvent] {

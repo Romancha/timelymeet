@@ -100,9 +100,7 @@ struct NextMeetingSection: View {
                 Spacer()
             }
             
-            // Show current meeting first, then next upcoming meeting
-            let displayEvent = calendarViewModel.currentMeeting ?? calendarViewModel.upcomingEvents.first
-            if let nextEvent = displayEvent {
+            if let nextEvent = calendarViewModel.getMostRelevantMeeting() {
                 let isSkipped = calendarViewModel.isMeetingSkippedInViewModel(for: nextEvent)
                 let meetingStatus = calendarViewModel.getMeetingStatus(for: nextEvent)
                 let isCurrent = meetingStatus == .current
@@ -292,7 +290,7 @@ struct TodayMeetingsSection: View {
     @EnvironmentObject private var calendarViewModel: CalendarViewModel
     let currentTime: Date
 
-    private let maxDisplayEvents = 6
+    private let maxDisplayEvents = 50
 
     var body: some View {
         let todayEvents = Array(calendarViewModel.todayEvents.prefix(maxDisplayEvents))
@@ -312,15 +310,23 @@ struct TodayMeetingsSection: View {
                         .foregroundColor(.secondary)
                 }
 
-                ForEach(Array(todayEvents.prefix(maxDisplayEvents)), id: \.uniqueID) { event in
-                    MenuBarEventRow(event: event, showDate: false, showEndTime: true, currentTime: currentTime)
-                }
-
-                if todayEvents.count > maxDisplayEvents {
-                    Text(String(format: "more_count".localized(), todayEvents.count - maxDisplayEvents))
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                        .padding(.top, 4)
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 6) {
+                            ForEach(todayEvents, id: \.uniqueID) { event in
+                                MenuBarEventRow(event: event, showDate: false, showEndTime: true, currentTime: currentTime)
+                                    .id(event.uniqueID)
+                            }
+                        }
+                    }
+                    .frame(height: 200)
+                    .scrollIndicators(.automatic)
+                    .scrollIndicatorsFlash(onAppear: true)
+                    .onAppear {
+                        if let targetEvent = calendarViewModel.getMostRelevantMeeting() {
+                            proxy.scrollTo(targetEvent.uniqueID, anchor: .center)
+                        }
+                    }
                 }
             }
         }
@@ -331,8 +337,8 @@ struct UpcomingMeetingsSection: View {
     @EnvironmentObject private var calendarViewModel: CalendarViewModel
     let currentTime: Date
 
-    private let maxDisplayEvents = 8
-    
+    private let maxDisplayEvents = 50
+
     var body: some View {
         // Use only non-today events for upcoming section
         let upcomingEventsOnly = calendarViewModel.upcomingEvents
@@ -357,43 +363,41 @@ struct UpcomingMeetingsSection: View {
                     .padding(.vertical, 8)
             } else {
                 let groupedEvents = groupEventsByDay(upcomingEventsOnly, maxEvents: maxDisplayEvents)
-                
-                ForEach(groupedEvents, id: \.title) { group in
-                    VStack(alignment: .leading, spacing: 4) {
-                        // Group header
-                        HStack {
-                            Text(group.title.localized())
-                                .font(.caption)
-                                .fontWeight(.semibold)
-                                .foregroundColor(group.color)
-                            
-                            Rectangle()
-                                .fill(group.color.opacity(0.3))
-                                .frame(height: 1)
-                            
-                            if !group.events.isEmpty {
-                                Text("\(group.events.count)")
-                                    .font(.caption2)
-                                    .foregroundColor(.secondary)
+
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 8) {
+                        ForEach(groupedEvents, id: \.title) { group in
+                            VStack(alignment: .leading, spacing: 4) {
+                                // Group header
+                                HStack {
+                                    Text(group.title.localized())
+                                        .font(.caption)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(group.color)
+
+                                    Rectangle()
+                                        .fill(group.color.opacity(0.3))
+                                        .frame(height: 1)
+
+                                    if !group.events.isEmpty {
+                                        Text("\(group.events.count)")
+                                            .font(.caption2)
+                                            .foregroundColor(.secondary)
+                                    }
+                                }
+
+                                // Events in this group
+                                ForEach(group.events, id: \.uniqueID) { event in
+                                    MenuBarEventRow(event: event, showDate: group.showDate, currentTime: currentTime)
+                                        .padding(.leading, 8)
+                                }
                             }
-                        }
-                        
-                        // Events in this group
-                        ForEach(group.events, id: \.uniqueID) { event in
-                            MenuBarEventRow(event: event, showDate: group.showDate, currentTime: currentTime)
-                                .padding(.leading, 8)
+                            .padding(.vertical, 2)
                         }
                     }
-                    .padding(.vertical, 2)
                 }
-                
-                let totalShown = groupedEvents.reduce(0) { $0 + $1.events.count }
-                if upcomingEventsOnly.count > totalShown {
-                    Text(String(format: "more_count".localized(), upcomingEventsOnly.count - totalShown))
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                        .padding(.top, 4)
-                }
+                .frame(height: 220)
+                .scrollIndicators(.visible)
             }
         }
     }
