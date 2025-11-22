@@ -215,27 +215,35 @@ struct FullscreenNotificationView: View {
     private func setupGlobalHotkeys() {
         // Clear any existing monitor first
         cleanupGlobalHotkeys()
-        
+
         // Set up local key event monitor for the fullscreen window
         keyDownMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
             let keyCode = event.keyCode
-            
+            let modifierFlags = event.modifierFlags
+
+            // Emergency force dismiss: Cmd+Shift+Escape
+            if keyCode == 53 && modifierFlags.contains([.command, .shift]) {
+                NSLog("[TimelyMeet] Emergency force dismiss triggered by user")
+                NotificationCenter.default.post(name: NSNotification.Name("EmergencyDismissNotification"), object: nil)
+                return nil
+            }
+
             // Handle different key presses
             switch keyCode {
-            case 53: // ESC key
+            case 53: // ESC key (normal dismiss)
                 onDismiss()
-                return nil // Consume the event
-                
+                return nil
+
             case 36: // Return key
                 if videoInfo != nil {
                     onJoin()
                 }
-                return nil // Consume the event
-                
+                return nil
+
             case 1: // S key
                 onSnooze(.threeMinutes)
-                return nil // Consume the event
-                
+                return nil
+
             default:
                 return event // Let other keys through
             }
