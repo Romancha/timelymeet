@@ -1,6 +1,40 @@
 {
   "releaseNotes": [
     {
+      "version": "1.6",
+      "date": "2025-11-22",
+      "changes": [
+        {
+          "type": "improvement",
+          "description": {
+            "en": "Added scrollable event lists to menu bar sections for better navigation with many events",
+            "ru": "Добавлены прокручиваемые списки событий для лучшей навигации при большом количестве событий"
+          }
+        },
+        {
+          "type": "improvement",
+          "description": {
+            "en": "Auto-scroll Today section to most relevant meeting on open for improved accessibility",
+            "ru": "Автоматическая прокрутка раздела Сегодня к наиболее актуальной встрече"
+          }
+        },
+        {
+          "type": "bugfix",
+          "description": {
+            "en": "Fixed full screen notification getting stuck and not dismissing properly",
+            "ru": "Исправлена проблема с застреванием полноэкранного уведомления"
+          }
+        },
+        {
+          "type": "bugfix",
+          "description": {
+            "en": "Fixed Next Meeting Section to correctly display most relevant meeting",
+            "ru": "Исправлен раздел 'Следующие встречи' для корректного отображения наиболее актуальной встречи"
+          }
+        }
+      ]
+    },
+    {
       "version": "1.5",
       "date": "2025-11-14",
       "changes": [
