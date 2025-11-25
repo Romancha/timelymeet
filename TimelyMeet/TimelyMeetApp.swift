@@ -57,7 +57,10 @@ struct AppRoot<Content: View>: View {
 @MainActor
 class AppModel: ObservableObject {
     @Published var isInitialized = false
-    
+
+    // Activity to prevent App Nap for reliable notification timers
+    private var criticalActivity: NSObjectProtocol?
+
     // Core services
     let dataManager = DataManager.shared
     let calendarViewModel = CalendarViewModel()
@@ -85,6 +88,9 @@ class AppModel: ObservableObject {
     )
     
     func initialize() async {
+        // Guard against multiple initialization calls
+        guard !isInitialized else { return }
+
         // Prevent App Nap and automatic termination for reliable notifications
         configureBackgroundExecution()
         
@@ -159,12 +165,18 @@ class AppModel: ObservableObject {
     private func configureBackgroundExecution() {
         // Prevent sudden termination to ensure notifications fire
         ProcessInfo.processInfo.disableSuddenTermination()
-        
+
         // Disable automatic termination with reason
         ProcessInfo.processInfo.disableAutomaticTermination("Meeting notifications active")
-        
-        // Prevent App Nap for consistent timer execution
-        // Note: ProcessInfo.processInfo doesn't have beginActivity in SwiftUI apps
-        // The Info.plist settings handle this instead
+
+        // CRITICAL: Prevent App Nap for precise notification timer execution
+        // Without this, macOS may delay DispatchSourceTimer by minutes when app is not in focus
+        // Using .userInitiatedAllowingIdleSystemSleep to:
+        // - Prevent App Nap (timers will fire precisely)
+        // - NOT prevent system sleep (battery friendly)
+        criticalActivity = ProcessInfo.processInfo.beginActivity(
+            options: .userInitiatedAllowingIdleSystemSleep,
+            reason: "Meeting notification timers must fire precisely"
+        )
     }
 }

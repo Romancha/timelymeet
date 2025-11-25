@@ -121,20 +121,24 @@ class NotificationScheduler: ObservableObject {
         timer.schedule(deadline: .now() + .nanoseconds(nanoseconds), leeway: .nanoseconds(1_000_000)) // 1ms leeway
         
         timer.setEventHandler { [weak self] in
-            guard let self = self else { 
+            guard let self = self else {
                 return
             }
-            
-            logger.info("Firing fullscreen notification for: \(notification.event.title ?? "Untitled")")
-            
+
+            // Log timing drift for diagnostics
+            let drift = Date().timeIntervalSince(notification.scheduledTime)
+            if abs(drift) > 1.0 {
+                self.logger.warning("⚠️ Notification timing drift: \(String(format: "%.2f", drift))s for '\(notification.event.title ?? "Untitled")'")
+            } else {
+                self.logger.info("✅ Notification fired on time (drift: \(String(format: "%.3f", drift))s) for: \(notification.event.title ?? "Untitled")")
+            }
+
             // Extract video info and show notification immediately
             let videoInfo = VideoConferenceManager().extractVideoConferenceInfo(from: notification.event)
-            
-            // Ensure UI updates happen on main queue
-            DispatchQueue.main.async {
-                self.fullscreenService.showFullscreenNotification(for: notification.event, videoInfo: videoInfo)
-            }
-            
+
+            // Show fullscreen notification (already on main queue)
+            self.fullscreenService.showFullscreenNotification(for: notification.event, videoInfo: videoInfo)
+
             // Clean up timer
             self.fullscreenTimers.removeValue(forKey: notification.id)
         }
