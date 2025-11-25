@@ -37,7 +37,7 @@ class ReleaseNotesService: ObservableObject {
             logger.info("Successfully loaded \(self.releaseNotes.count) release notes")
             
         } catch {
-            logger.error("Failed to load release notes: \(error.localizedDescription)")
+            logger.error("Failed to load release notes: \(error)")
         }
         
         isLoading = false
