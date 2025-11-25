@@ -1,6 +1,19 @@
 {
   "releaseNotes": [
     {
+      "version": "1.6.1",
+      "date": "2025-11-25",
+      "changes": [
+        {
+          "type": "bugfix",
+          "description": {
+            "en": "Fixed Late notifications about the event",
+            "ru": "Исправлены поздние уведомления о событии"
+          }
+        }
+      ]
+    },
+    {
       "version": "1.6",
       "date": "2025-11-22",
       "changes": [
