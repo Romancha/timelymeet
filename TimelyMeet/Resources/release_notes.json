@@ -21,7 +21,7 @@
         {
           "type": "bugfix",
           "description": {
-            "en": "Fixed the Rate on App Store button opening the Russian App Store regardless of region",
+            "en": "Fixed the Rate on App Store button",
             "ru": "Кнопка «Оценить в App Store» теперь открывает App Store вашего региона"
           }
         }
