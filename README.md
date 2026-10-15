@@ -8,8 +8,10 @@
 ### Stay timely. Never miss a meet.
 #### Meeting Notifications for macOS
 
-<!-- App Store Badge -->
-[![Download on the App Store](https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg)](https://apps.apple.com/app/timelymeet/id6751949087)
+<!-- Download Badges -->
+<a href="https://apps.apple.com/app/timelymeet/id6751949087"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="40"></a>
+&nbsp;
+<a href="https://github.com/Romancha/timelymeet/releases/latest/download/TimelyMeet.dmg"><img src="https://img.shields.io/badge/Download-DMG-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Download DMG" height="40"></a>
 
 ![GitHub release (with filter)](https://img.shields.io/github/v/release/romancha/TimelyMeet)
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/romancha/TimelyMeet)
@@ -94,6 +96,14 @@ For Macs where the App Store is unavailable (e.g. managed work machines):
 The DMG is signed with a Developer ID and notarized by Apple. It has the same features as the App Store version.
 
 **Updates:** the DMG version does not update itself. To get notified about new versions, click **Watch → Custom → Releases** on this repository, or use **About → Download Latest Version** in the app settings.
+
+#### Homebrew
+
+The same notarized DMG, with updates via `brew upgrade`:
+
+```bash
+brew install --cask romancha/tap/timelymeet
+```
 
 > Install only one version: the App Store and DMG builds share the same app identifier, so running both leads to duplicate menu bar icons and notifications.
 

@@ -10,12 +10,15 @@
 #
 # The script takes the version from the Xcode project, checks everything it can up front, builds and
 # notarizes the DMG, shows the release notes generated from release_notes.json, and after confirmation
-# creates the tag and the GitHub release with the DMG attached. Safe to re-run after a failure.
+# creates the tag and the GitHub release with the DMG attached, then bumps the Homebrew cask.
+# Safe to re-run after a failure.
 
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 REPO="Romancha/timelymeet"
+TAP_REPO="Romancha/homebrew-tap"
+CASK_PATH="Casks/timelymeet.rb"
 NOTES_JSON="$ROOT_DIR/TimelyMeet/Resources/release_notes.json"
 BUILD_DIR="${BUILD_DIR:-$ROOT_DIR/build}"
 DMG_PATH="$BUILD_DIR/TimelyMeet.dmg"
@@ -24,6 +27,31 @@ NOTARY_KEYCHAIN_PROFILE="${NOTARY_KEYCHAIN_PROFILE:-timelymeet}"
 
 log() { echo "==> $*"; }
 fail() { echo "Error: $*" >&2; exit 1; }
+
+# Sets version and sha256 in the tap's cask via the GitHub API (no local clone needed).
+# The checksum comes from the published release asset, i.e. exactly what users download.
+update_homebrew_cask() {
+    local dmg_sha cask file_sha current updated
+    dmg_sha=$(gh release view "$VERSION" --repo "$REPO" --json assets \
+        --jq '.assets[] | select(.name == "TimelyMeet.dmg") | .digest | sub("^sha256:"; "")') || return 1
+    [[ -n "$dmg_sha" ]] || { echo "TimelyMeet.dmg not found in release $VERSION" >&2; return 1; }
+    cask=$(gh api "repos/$TAP_REPO/contents/$CASK_PATH") || return 1
+    file_sha=$(jq -r '.sha' <<<"$cask")
+    current=$(jq -r '.content' <<<"$cask" | base64 --decode)
+    updated=$(sed -E \
+        -e "s/^  version \".*\"$/  version \"$VERSION\"/" \
+        -e "s/^  sha256 \".*\"$/  sha256 \"$dmg_sha\"/" <<<"$current")
+
+    if [[ "$updated" == "$current" ]]; then
+        log "Homebrew cask is already at $VERSION"
+        return 0
+    fi
+    gh api -X PUT "repos/$TAP_REPO/contents/$CASK_PATH" \
+        -f message="timelymeet $VERSION" \
+        -f content="$(base64 <<<"$updated")" \
+        -f sha="$file_sha" > /dev/null || return 1
+    log "Homebrew cask updated to $VERSION"
+}
 
 cd "$ROOT_DIR"
 
@@ -47,7 +75,9 @@ if git rev-parse -q --verify "refs/tags/$VERSION" > /dev/null; then
         || fail "tag $VERSION already exists on another commit; bump MARKETING_VERSION"
 fi
 if gh release view "$VERSION" --repo "$REPO" --json isDraft --jq '.isDraft' 2>/dev/null | grep -q false; then
-    fail "release $VERSION is already published"
+    log "Release $VERSION is already published; only making sure the Homebrew cask is up to date"
+    update_homebrew_cask || fail "could not update the Homebrew cask"
+    exit 0
 fi
 
 jq -e --arg v "$VERSION" '.releaseNotes[] | select(.version == $v)' "$NOTES_JSON" > /dev/null \
@@ -55,6 +85,8 @@ jq -e --arg v "$VERSION" '.releaseNotes[] | select(.version == $v)' "$NOTES_JSON
 
 xcrun notarytool history --keychain-profile "$NOTARY_KEYCHAIN_PROFILE" > /dev/null 2>&1 \
     || fail "notarization profile '$NOTARY_KEYCHAIN_PROFILE' not found; see scripts/build-dmg.sh for one-time setup"
+gh api "repos/$TAP_REPO/contents/$CASK_PATH" --silent \
+    || fail "cannot read $CASK_PATH in $TAP_REPO"
 
 # --- Build ---
 
@@ -105,3 +137,7 @@ else
 fi
 
 log "Published: https://github.com/$REPO/releases/tag/$VERSION"
+
+# The release is already out at this point, so a tap failure only warns; re-running the script finishes it
+update_homebrew_cask \
+    || echo "Warning: Homebrew cask was not updated; re-run scripts/release.sh to retry" >&2
