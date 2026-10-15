@@ -1,6 +1,33 @@
 {
   "releaseNotes": [
     {
+      "version": "1.6.2",
+      "date": "2026-10-15",
+      "changes": [
+        {
+          "type": "feature",
+          "description": {
+            "en": "TimelyMeet is now available as a notarized DMG on GitHub for Macs without App Store access",
+            "ru": "TimelyMeet теперь доступен в виде нотаризованного DMG на GitHub для компьютеров без доступа к App Store"
+          }
+        },
+        {
+          "type": "bugfix",
+          "description": {
+            "en": "Fixed a typo in the Dismiss button (thanks @alphonse-terrier)",
+            "ru": "Исправлена опечатка в кнопке Dismiss в английской версии (спасибо @alphonse-terrier)"
+          }
+        },
+        {
+          "type": "bugfix",
+          "description": {
+            "en": "Fixed the Rate on App Store button opening the Russian App Store regardless of region",
+            "ru": "Кнопка «Оценить в App Store» теперь открывает App Store вашего региона"
+          }
+        }
+      ]
+    },
+    {
       "version": "1.6.1",
       "date": "2025-11-25",
       "changes": [
