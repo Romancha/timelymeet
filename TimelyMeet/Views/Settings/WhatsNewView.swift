@@ -91,15 +91,26 @@ struct WhatsNewView: View {
                         }
                         .buttonStyle(.borderedProminent)
                         
-                        Button("rate_app_store".localized()) {
-                            if let url = URL(string: "https://apps.apple.com/ru/app/timelymeet/id6751949087") {
-                                NSWorkspace.shared.open(url)
+                        switch DistributionChannel.current {
+                        case .appStore:
+                            Button("rate_app_store".localized()) {
+                                NSWorkspace.shared.open(DistributionChannel.appStoreURL)
                             }
+                            .buttonStyle(.bordered)
+                        case .direct:
+                            Button {
+                                NSWorkspace.shared.open(DistributionChannel.repositoryURL)
+                            } label: {
+                                HStack(spacing: 4) {
+                                    Image(systemName: "star.fill")
+                                    Text("star_on_github".localized())
+                                }
+                            }
+                            .buttonStyle(.bordered)
                         }
-                        .buttonStyle(.bordered)
-                        
+
                         Button {
-                            NSWorkspace.shared.open(URL(string: "https://github.com/Romancha/timelymeet")!)
+                            NSWorkspace.shared.open(DistributionChannel.repositoryURL)
                         } label: {
                             HStack(spacing: 4) {
                                 Image(systemName: "terminal.fill")

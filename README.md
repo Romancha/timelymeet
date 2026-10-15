@@ -83,6 +83,20 @@ Your calendar data never leaves your device. No tracking, no analytics, no data 
 
 [![Download on the App Store](https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg)](https://apps.apple.com/app/timelymeet/id6751949087)
 
+#### Direct Download (DMG)
+
+For Macs where the App Store is unavailable (e.g. managed work machines):
+
+1. Download **[TimelyMeet.dmg](https://github.com/Romancha/timelymeet/releases/latest/download/TimelyMeet.dmg)** from the latest release
+2. Open the DMG and drag **TimelyMeet** to **Applications**
+3. Launch TimelyMeet from Applications and grant calendar access
+
+The DMG is signed with a Developer ID and notarized by Apple. It has the same features as the App Store version.
+
+**Updates:** the DMG version does not update itself. To get notified about new versions, click **Watch → Custom → Releases** on this repository, or use **About → Download Latest Version** in the app settings.
+
+> Install only one version: the App Store and DMG builds share the same app identifier, so running both leads to duplicate menu bar icons and notifications.
+
 #### Building from Source
 
 ```bash
@@ -127,6 +141,21 @@ xcodebuild test -project TimelyMeet.xcodeproj -scheme TimelyMeet -destination 'p
 
 # Open in Xcode
 open TimelyMeet.xcodeproj
+```
+
+### Releasing the DMG
+
+The DMG is built, signed and notarized locally, so the Developer ID key never leaves the maintainer's Mac.
+
+1. Bump `MARKETING_VERSION` / `CURRENT_PROJECT_VERSION`, add the version to `TimelyMeet/Resources/release_notes.json`, commit and push to `master`
+2. Run `./scripts/release.sh`: it builds and notarizes `TimelyMeet.dmg`, shows the release notes generated from `release_notes.json` and, after confirmation, creates the tag and the GitHub release with the DMG attached
+
+```bash
+# One-time: store notarization credentials in the keychain
+xcrun notarytool store-credentials timelymeet --apple-id <apple-id> --team-id KY6MPSHF75
+
+# Dry run: build and sign without notarization or publishing
+SKIP_NOTARIZATION=1 ./scripts/build-dmg.sh
 ```
 
 ## 🌟 Roadmap

@@ -52,7 +52,21 @@ struct AboutView: View {
                             Text(String(format: "version_format".localized(), Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0", Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"))
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
-                            
+
+                            // App Store installs update automatically; direct (DMG) users check releases themselves
+                            if DistributionChannel.current == .direct {
+                                Button {
+                                    NSWorkspace.shared.open(DistributionChannel.latestReleaseURL)
+                                } label: {
+                                    HStack(spacing: 4) {
+                                        Image(systemName: "arrow.down.circle")
+                                        Text("download_latest_version".localized())
+                                    }
+                                }
+                                .buttonStyle(.link)
+                                .font(.subheadline)
+                            }
+
                             Text("app_description".localized())
                                 .font(.body)
                                 .foregroundColor(.secondary)
@@ -128,7 +142,7 @@ struct AboutView: View {
                         .buttonStyle(.link)
                         
                         Button {
-                            NSWorkspace.shared.open(URL(string: "https://github.com/Romancha/timelymeet")!)
+                            NSWorkspace.shared.open(DistributionChannel.repositoryURL)
                         } label: {
                             HStack(spacing: 4) {
                                 Image(systemName: "terminal.fill")

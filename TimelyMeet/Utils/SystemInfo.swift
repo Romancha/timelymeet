@@ -30,6 +30,7 @@ struct SystemInfo {
         macOS: \(systemVersion)
         Model: \(macModel)
         App Version: \(version) (\(build))
+        Distribution: \(DistributionChannel.current.displayName)
         """
     }
 }

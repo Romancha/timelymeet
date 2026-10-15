@@ -1274,6 +1274,23 @@
         }
       }
     },
+    "download_latest_version" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download Latest Version"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скачать последнюю версию"
+          }
+        }
+      }
+    },
     "enable_developer_mode" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -4150,6 +4167,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Исходный код"
+          }
+        }
+      }
+    },
+    "star_on_github" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Star on GitHub"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звезда на GitHub"
           }
         }
       }
