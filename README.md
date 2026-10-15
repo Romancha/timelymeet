@@ -11,8 +11,6 @@
 <!-- Download Badges -->
 <a href="https://apps.apple.com/app/timelymeet/id6751949087"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="40"></a>&nbsp;<a href="https://github.com/Romancha/timelymeet/releases/latest/download/TimelyMeet.dmg"><img src="https://img.shields.io/badge/Download-DMG-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Download DMG" height="40"></a>&nbsp;<a href="#homebrew"><img src="https://img.shields.io/badge/Install-Homebrew-000000?style=for-the-badge&logo=homebrew&logoColor=FBB040" alt="Install with Homebrew" height="40"></a>
 
-`brew install --cask romancha/tap/timelymeet`
-
 ![GitHub release (with filter)](https://img.shields.io/github/v/release/romancha/TimelyMeet)
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/romancha/TimelyMeet)
 ![macOS](https://img.shields.io/badge/macOS-15.0+-blue?logo=apple)
